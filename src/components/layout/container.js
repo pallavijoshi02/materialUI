@@ -10,10 +10,9 @@ class ContainerExample extends Component {
         return (
             <React.Fragment>
                 <CssBaseline />
-                <Container maxWidth="xl">
+                <Container maxWidth="md" className="col-md-8" style={{ marginLeft: 100, padding: 38 }}>
                     <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '100vh' }} />
-                    <Box component="span" m={1}>
-                        
+                    <Box component="span" m={1}>                
                         <Button />
                     </Box>
                 </Container>
