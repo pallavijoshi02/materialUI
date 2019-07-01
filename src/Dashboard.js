@@ -40,7 +40,7 @@ export default function DashBoard() {
         <ListItemText primary="Layout" />
         {open ? <ExpandLess /> : <ExpandMore />}
       </ListItem>
-      <Collapse in={open} timeout="auto" unmountOnExit>
+      <Collapse in={!open} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
           {/* <ListItem button className={classes.nested}>
           <a href=""><ListItemText primary="Box" /></a>
@@ -57,6 +57,71 @@ export default function DashBoard() {
           <ListItem button className={classes.nested}>
           <a href="hidden"><ListItemText primary="Hidden" /></a>
           </ListItem>
+
+
+          </List>
+      </Collapse>
+          <ListItem button onClick={handleClick}>
+        <ListItemText primary="Input" />
+        {open ? <ExpandLess /> : <ExpandMore />}
+      </ListItem>
+      <Collapse in={!open} timeout="auto" unmountOnExit>
+        <List component="div" disablePadding>
+          <ListItem button className={classes.nested}>
+          <a href="/autocomplete"><ListItemText primary="Auto Complete" /></a>
+          </ListItem>
+          <ListItem button className={classes.nested}>
+          <a href="/button"><ListItemText primary="Button" /></a>
+          </ListItem>
+          <ListItem button className={classes.nested}>
+          <a href="/checkbox"><ListItemText primary="Checkbox" /></a>
+          </ListItem>
+          <ListItem button className={classes.nested}>
+          <a href="/pickers"><ListItemText primary="Pickers" /></a>
+          </ListItem>
+          <ListItem button className={classes.nested}>
+          <a href="radio"><ListItemText primary="RadioButtons"/></a>
+          </ListItem>
+          <ListItem button className={classes.nested}>
+          <a href="/select"><ListItemText primary="Select" /></a>
+          </ListItem>
+          <ListItem button className={classes.nested}>
+          <a href="/switch"><ListItemText primary="Switches" /></a>
+          </ListItem>
+          <ListItem button className={classes.nested}>
+          <a href="/textfield"><ListItemText primary="TextFeild" /></a>
+          </ListItem>
+          <ListItem button className={classes.nested}>
+          <a href="transferlist"><ListItemText primary="Transfer List" /></a>
+          </ListItem>
+        </List>
+      </Collapse>
+
+      <ListItem button onClick={handleClick}>
+        <ListItemText primary="Navigation" />
+        {open ? <ExpandLess /> : <ExpandMore />}
+      </ListItem>
+      <Collapse in={!open} timeout="auto" unmountOnExit>
+        <List component="div" disablePadding>
+          <ListItem button className={classes.nested}>
+          <a href="/bottomnav"><ListItemText primary="Bottom Navigation" /></a>
+          </ListItem>
+          <ListItem button className={classes.nested}>
+          <a href="/breadcrumbs"><ListItemText primary="Breadcrumbs" /></a>
+          </ListItem>
+          <ListItem button className={classes.nested}>
+          <a href="/drawer"><ListItemText primary="Drawer" /></a>
+          </ListItem>
+          <ListItem button className={classes.nested}>
+          <a href="/menu"><ListItemText primary="Menu" /></a>
+          </ListItem>
+          <ListItem button className={classes.nested}>
+          <a href="steppers"><ListItemText primary="Steppers"/></a>
+          </ListItem>
+          <ListItem button className={classes.nested}>
+          <a href="/tabs"><ListItemText primary="Tabs" /></a>
+          </ListItem>
+          
         </List>
       </Collapse>
     </List>

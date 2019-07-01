@@ -31,6 +31,7 @@ export default function ComplexGrid() {
 
   return (
     <div className={classes.root}>
+      <h1> Complex Grid</h1>
       <Paper className={classes.paper}>
         <Grid container spacing={2}>
           <Grid item>

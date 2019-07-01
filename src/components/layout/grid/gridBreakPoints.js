@@ -19,6 +19,8 @@ export default function GridBreakPoints() {
 
     return (
         <div className={classes.root}>
+
+    <h1> Grid Break Point</h1>
             <Grid container spacing={3}>
                 <Grid item xs={12}>
                     <Paper className={classes.paper}>xs=12</Paper>

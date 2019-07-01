@@ -7,55 +7,111 @@ import SimpleSelect from './simpleSelect';
 import NativeSelects from './nativeSelect';
 
 
-class selectExample extends Component {
+class SelectExample extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            controlledOpenSelect:false,
+            customizedSelects:false,
+            dialougeSelect:false,
+            multipleSelect:false,
+            simpleSelect:false,
+            nativeSelect:false
+        }
+    }
+
+    buttonClick(event) {
+        if (event.target.name === 'controlledOpenSelect') {
+            this.setState({
+                controlledOpenSelect:!this.state.controlledOpenSelect,
+                customizedSelects:false,
+                dialougeSelect:false,
+                multipleSelect:false,
+                simpleSelect:false,
+                nativeSelect:false
+            })
+        }
+        else if (event.target.name === 'customizedSelects') {
+            this.setState({
+                controlledOpenSelect:false,
+                customizedSelects:!this.state.customizedSelects,
+                dialougeSelect:false,
+                multipleSelect:false,
+                simpleSelect:false,
+                nativeSelect:false
+            })
+        }
+        else if (event.target.name === 'dialougeSelect') {
+            this.setState({
+                controlledOpenSelect:false,
+                customizedSelects:false,
+                dialougeSelect:!this.state.dialougeSelect,
+                multipleSelect:false,
+                simpleSelect:false,
+                nativeSelect:false
+            })
+        }
+        else if (event.target.name === 'multipleSelect') {
+            this.setState({
+                controlledOpenSelect:false,
+                customizedSelects:false,
+                dialougeSelect:false,
+                multipleSelect:!this.state.multipleSelect,
+                simpleSelect:false,
+                nativeSelect:false
+            })
+        }
+        else if (event.target.name === 'simpleSelect') {
+            this.setState({
+                controlledOpenSelect:false,
+                customizedSelects:false,
+                dialougeSelect:false,
+                multipleSelect:false,
+                simpleSelect:!this.state.simpleSelect,
+                nativeSelect:false
+            })
+        }
+        else if (event.target.name === 'nativeSelect') {
+            this.setState({
+                controlledOpenSelect:false,
+                customizedSelects:false,
+                dialougeSelect:false,
+                multipleSelect:false,
+                simpleSelect:false,
+                nativeSelect:!this.state.nativeSelect
+            })
+        }
+    }
+
     render() {
         return (
             <div className="row">
-                <div className="col-md-10 col-sm-10 col-xs-10">
+                <div className="col-md-8" style={{ marginLeft: 250, padding: 38 }}>
                     <div className="form-group">
-                        <label className="bmd-label-floating">Basic Grid</label>
-                        <ControlledOpenSelect />
+                        <button type="button" name="controlledOpenSelect" className="btn btn-info" onClick={this.buttonClick.bind(this)}>Controlled Open Select</button>
+                        <button type="button" name="customizedSelects" className="btn btn-info ml-auto" onClick={this.buttonClick.bind(this)}>Cutomized Select</button>
+                        <button type="button" name="dialougeSelect" className="btn btn-info" onClick={this.buttonClick.bind(this)}> Dialog Select</button>
+                        <button type="button" name="multipleSelect" className="btn btn-info" onClick={this.buttonClick.bind(this)}>Multiple Select</button>
+                        <button type="button" name="simpleSelect" className="btn btn-info" onClick={this.buttonClick.bind(this)}> Simple Select</button>
+                        <button type="button" name="nativeSelect" className="btn btn-info" onClick={this.buttonClick.bind(this)}>Native Select</button>
+                      </div>
+                    <div className="col-md-10 mt-5">
+                        <div className="form-group">
+                            {!this.state.controlledOpenSelect ? '' : <ControlledOpenSelect />}
+                            {!this.state.customizedSelects ? '' : <CustomizedSelects />}
+                            {!this.state.dialougeSelect ? '' : <DialogSelect />}
+                            {!this.state.multipleSelect ? '' : <MultipleSelect />}
+                            {!this.state.simpleSelect ? '' : <SimpleSelect />}
+                            {!this.state.nativeSelect ? '' : <NativeSelects />}
+                        </div>
                     </div>
-                </div>
-
-                <div className="col-md-10 col-sm-10 col-xs-10 mt-5">
-                    <div className="form-group">
-                        <label className="bmd-label-floating"> spacing Grid</label>
-                        <CustomizedSelects />
-                    </div>
-                </div>
-
-                <div className="col-md-10 col-sm-10 col-xs-10 mt-5">
-                    <div className="form-group">
-                        <label className="bmd-label-floating"> Grid With BreakPoints</label>
-                        <DialogSelect />
-                    </div>
-                </div>
-
-                <div className="col-md-10 col-sm-10 col-xs-10 mt-5">
-                    <div className="form-group">
-                        <label className="bmd-label-floating"> Auto Grid</label>
-                        <MultipleSelect />
-                    </div>
-                </div>
-
-                <div className="col-md-10 col-sm-10 col-xs-10 mt-5">
-                    <div className="form-group">
-                        <label className="bmd-label-floating"> Complex Grid</label>
-                     <NativeSelects/>
-                    </div>
-                </div>
-
-
-                <div className="col-md-10 col-sm-10 col-xs-10 mt-5">
-                    <div className="form-group">
-                        <label className="bmd-label-floating"> Complex Grid</label>
-                        <SimpleSelect />
-                    </div>
-                </div>
+                </div >
             </div>
+            
         )
     }
 }
 
-export default selectExample;
+export default SelectExample;
+
+

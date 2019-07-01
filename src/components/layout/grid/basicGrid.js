@@ -6,6 +6,7 @@ class GridExample extends Component {
     render() {
         return (
             <div>
+                <h1> Basic Grid</h1>
                 <Grid container spacing={3}>
                     <Grid item xs={12}>
                         <Paper>xs=12</Paper>

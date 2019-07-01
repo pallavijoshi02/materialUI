@@ -28,7 +28,7 @@ class AboutUs extends Component {
                                     2. Understanding the problem and bringing optimal solution. <br />
                                     3. Following Agile Methodology which helps the team to grow stay focus and
                                        deliver.
-                                   </p>
+                                 </p>
                             </div>
                         </div>
                     </div>

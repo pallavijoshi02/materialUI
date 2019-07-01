@@ -14,11 +14,17 @@ import CheckboxExample from './components/Input/checkboxes/checkBoxExample';
 import Dashboard from './Dashboard';
 import Header from './components/header';
 import Container from '@material-ui/core/Container';
+import RadioButton from './components/Input/radioButtons/radioButtonExample';
+import AutoComplete from './components/Input/autoComplete/autoComplete';
+import SwitchExamples from './components/Input/switches/switchExample';
+import SelectExample from './components/Input/selects/selectExample';
+import TransferListExample from './components/Input/transferList/transferListExample';
+import TextfieldExample from './components/Input/textField/textfieldExample';
+import BottomNavigationEg from './components/navigation/bottomNavigation/bottomNavigationEg';
 
 class Routes extends Component {
   render() {
     return (
-
       <div className="wrapper">
         <Header />
         <Dashboard />
@@ -27,16 +33,23 @@ class Routes extends Component {
             <Container maxWidth="lg">
               <Route path="/components" component={Dashboard} />
               <Route path="/container" component={ContainerExample} />
-              {/* <Route path="/grid" component={GridExample} /> */}
               <Route path="/grid" component={Grid} />
               <Route path="/gridList" component={GridList} />
               <Route path="/hidden" component={Hidden} />
-              <Route path="/appBar" component={AppBarExample} />
+              <Route path="/autocomplete" component={AutoComplete} />
+              <Route path="/appbar" component={AppBarExample} />
               <Route path="/paper" component={PaperSheet} />
               <Route path="/card" component={CardExample} />
               <Route path="/expansion" component={ExpansionPanel} />
               <Route path="/button" component={Buttons} />
               <Route path="/checkbox" component={CheckboxExample} />
+              <Route path="/radio" component={RadioButton} />
+              <Route path="/expansion" component={ExpansionPanel} />
+              <Route path="/select" component={SelectExample} />
+              <Route path="/switchexample" component={SwitchExamples} />
+              <Route path="/textfield" component={TextfieldExample} />
+              <Route path="/transferlist" component={TransferListExample} />
+              <Route path="/bottomnav" component={BottomNavigationEg} />
               {/* <Route path="/picker" component={PickerExample} /> */}
             </Container>
           </Switch>

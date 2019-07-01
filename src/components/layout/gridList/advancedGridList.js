@@ -44,7 +44,7 @@ const tileData = [
         title: 'Image',
         author: 'author',
         cols: 2,
-    }, ,
+    }, 
     {
         img: background1,
         title: 'Image',

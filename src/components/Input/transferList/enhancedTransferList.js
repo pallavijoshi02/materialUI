@@ -41,7 +41,7 @@ function union(a, b) {
   return [...a, ...not(b, a)];
 }
 
-export default function TransferList() {
+export default function EnhancedTransferList() {
   const classes = useStyles();
   const [checked, setChecked] = React.useState([]);
   const [left, setLeft] = React.useState([0, 1, 2, 3]);
