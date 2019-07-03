@@ -109,9 +109,9 @@ export default function DashBoard() {
           <ListItem button className={classes.nested}>
           <a href="/breadcrumbs"><ListItemText primary="Breadcrumbs" /></a>
           </ListItem>
-          <ListItem button className={classes.nested}>
+          {/* <ListItem button className={classes.nested}>
           <a href="/drawer"><ListItemText primary="Drawer" /></a>
-          </ListItem>
+          </ListItem> */}
           <ListItem button className={classes.nested}>
           <a href="/link"><ListItemText primary="Links" /></a>
           </ListItem>
@@ -225,9 +225,9 @@ export default function DashBoard() {
           <ListItem button className={classes.nested}>
           <a href="mediaquery"><ListItemText primary="Use Media Query"/></a>
           </ListItem>
-          <ListItem button className={classes.nested}>
+          {/* <ListItem button className={classes.nested}>
           <a href="/modal"><ListItemText primary="Modal" /></a>
-          </ListItem>
+          </ListItem> */}
         </List>
       </Collapse>
 

@@ -42,6 +42,11 @@ import TypoEg from './components/dataDisplay/typography/typographyEg';
 import SpeeddialEg from './components/lab/speedDial/speedDialEg';
 import ToggleEg from './components/lab/toggleButton/toggleEg';
 import SliderEg from './components/lab/slider/sliderEg';
+import NossrEg from './components/utils/noSSR/nossr';
+import PopoverEg from './components/utils/popover/popoverEg';
+import PopperEg from './components/utils/popper/popperEg';
+import TransitionEg from './components/utils/transition/transitionEg';
+import MediaQueryEg from './components/utils/useMediaQuery/mediaQueryEg';
 
 class Routes extends Component {
   render() {
@@ -96,6 +101,15 @@ class Routes extends Component {
               <Route path="/tooltip" component={TooltipEg} />
               <Route path="/typography" component={TypoEg} />
 
+              <Route path="/slider" component={SliderEg} />
+              <Route path="/speedial" component={SpeeddialEg} />
+              <Route path="/toggle" component={ToggleEg} />
+
+              
+              <Route path="/nossr" component={NossrEg} />
+              <Route path="/popover" component={PopoverEg} />
+              <Route path="/popper" component={PopperEg} />
+              <Route path="/mediaquery" component={MediaQueryEg} />
               <Route path="/slider" component={SliderEg} />
               <Route path="/speedial" component={SpeeddialEg} />
               <Route path="/toggle" component={ToggleEg} />
