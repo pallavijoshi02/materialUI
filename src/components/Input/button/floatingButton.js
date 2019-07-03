@@ -31,7 +31,7 @@ TabContainer.propTypes = {
 
 const useStyles = makeStyles(theme => ({
   root: {
-    backgroundColor: theme.palette.background.paper,
+   // backgroundColor: theme.palette.background.paper,
     width: 500,
     position: 'relative',
     minHeight: 200,

@@ -3,7 +3,6 @@ import RecipeReviewCard from './complexInteraction';
 import MediaCard from './mediaCard';
 import MediaControlCard from './mediaControlCard';
 import SimpleCard from './simpleCard';
-import Button from '@material-ui/core/Button';
 
 class CardExample extends Component {
     constructor(props) {
@@ -18,36 +17,48 @@ class CardExample extends Component {
     render() {
         return (
             <div className="row">
-                {/* <Button variant="contained" color="primary"> Complex Card</Button>
-            <Button variant="contained" color="primary">Media Card</Button>
-            <Button variant="contained" color="primary">Media Control Card</Button>
-            <Button variant="contained" color="primary">Simple Card</Button> */}
+                <div className="col-md-8" style={{ marginLeft: 250, padding: 38 }}>
+                    <h1>Cards</h1>
+                    <p className="text-justify">
+                    Cards are surfaces that display content and actions on a single topic.
 
-                <div className="col-md-10 col-sm-10 col-xs-10">
+                    They should be easy to scan for relevant and actionable information. 
+                    Elements, like text and images, should be placed on them in a way that clearly indicates hierarchy.
+                  </p>
                     <div className="form-group">
-                        <label className="bmd-label-floating">Basic Grid</label>
-                        <RecipeReviewCard />
+                        <label><h3>Simple Card</h3></label>
+                        <p className="text-justify">
+                        Although cards can support multiple actions, UI controls, and an overflow menu, 
+                        use restraint and remember that cards are entry points to more complex and detailed information.
+                        </p>
+                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                         <SimpleCard/>
+                        </div>
                     </div>
-                </div>
 
-                <div className="col-md-10 col-sm-10 col-xs-10 mt-5">
-                    <div className="form-group">
-                        <label className="bmd-label-floating"> spacing Grid</label>
-                        <MediaCard />
+                    <div className="form-group mt-5">
+                        <label> <h3>Complex Interaction</h3></label>
+                       <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                         <RecipeReviewCard/>
+                        </div>
                     </div>
-                </div>
-
-                <div className="col-md-10 col-sm-10 col-xs-10 mt-5">
-                    <div className="form-group">
-                        <label className="bmd-label-floating"> Grid With BreakPoints</label>
-                        <MediaControlCard />
+                    <div className="form-group mt-5">
+                        <label> <h3>Media</h3></label>
+                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                         <MediaCard/>
+                        </div>
                     </div>
-                </div>
+                    <div className="form-group mt-5">
+                        <label> <h3>Media Control Card</h3></label>
+                        <p className="text-justify">
+                        Supplemental actions within the card are explicitly called out using icons, 
+                        text, and UI controls, typically placed at the bottom of the card.
 
-                <div className="col-md-10 col-sm-10 col-xs-10 mt-5">
-                    <div className="form-group">
-                        <label className="bmd-label-floating"> Auto Grid</label>
-                        <SimpleCard />
+                        Here's an example of a media control card.
+                        </p>
+                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                          <MediaControlCard/>
+                        </div>
                     </div>
                 </div>
             </div>

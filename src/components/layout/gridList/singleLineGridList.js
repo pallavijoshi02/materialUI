@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
     flexWrap: 'wrap',
     justifyContent: 'space-around',
     overflow: 'hidden',
-    backgroundColor: theme.palette.background.paper,
+  //  backgroundColor: theme.palette.background.paper,
   },
   gridList: {
     flexWrap: 'nowrap',
@@ -43,7 +43,7 @@ const tileData = [
       title: 'Image',
       author: 'author',
       cols: 2,
-  },,
+  },
   {
       img: background1,
       title: 'Image',

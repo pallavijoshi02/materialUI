@@ -13,7 +13,7 @@ export default function PaperSheet() {
   const classes = useStyles();
 
   return (
-    <div>
+    <div className="col-md-8" style={{ marginLeft: 250, padding: 38 }}>
       <Paper className={classes.root}>
         <Typography variant="h5" component="h3">
           This is a sheet of paper.

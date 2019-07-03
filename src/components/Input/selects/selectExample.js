@@ -6,51 +6,73 @@ import MultipleSelect from './multipleSelect';
 import SimpleSelect from './simpleSelect';
 import NativeSelects from './nativeSelect';
 
-
-class selectExample extends Component {
+class SelectExample extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+        }
+    }
     render() {
         return (
             <div className="row">
-                <div className="col-md-10 col-sm-10 col-xs-10">
+                <div className="col-md-8" style={{ marginLeft: 250, padding: 38 }}>
+                    <h1>Select</h1>
+                    <p className="text-justify">
+                        Select components are used for collecting user provided information from a list of options.
+                    </p>
                     <div className="form-group">
-                        <label className="bmd-label-floating">Basic Grid</label>
-                        <ControlledOpenSelect />
+                        <label><h3>Controlled Open Select</h3></label>
+                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                            <ControlledOpenSelect />
+                        </div>
                     </div>
-                </div>
-
-                <div className="col-md-10 col-sm-10 col-xs-10 mt-5">
-                    <div className="form-group">
-                        <label className="bmd-label-floating"> spacing Grid</label>
-                        <CustomizedSelects />
+                    <div className="form-group mt-5">
+                        <label> <h3> Customized Select</h3></label>
+                        <p className="text-justify">
+                            Here are some examples of customizing the component. You can learn more about this in the overrides documentation page.
+    
+                            The first step is to style the InputBase component. Once it's styled, you can either
+                            use it directly as a text field or provide it to the select input property to have a select field.
+                       </p>
+                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                            <CustomizedSelects />
+                        </div>
                     </div>
-                </div>
-
-                <div className="col-md-10 col-sm-10 col-xs-10 mt-5">
-                    <div className="form-group">
-                        <label className="bmd-label-floating"> Grid With BreakPoints</label>
-                        <DialogSelect />
+                    <div className="form-group mt-5">
+                        <label> <h3> Dialog Select </h3></label>
+                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                            <DialogSelect />
+                        </div>
                     </div>
-                </div>
-
-                <div className="col-md-10 col-sm-10 col-xs-10 mt-5">
                     <div className="form-group">
-                        <label className="bmd-label-floating"> Auto Grid</label>
-                        <MultipleSelect />
+                        <label><h3>Multiple Select</h3></label>
+                        <p className="text-justify">
+                            The Select component can handle multiple selections. It's enabled with the multiple property.
+    
+                            Like with the single selection, you can pull out the new value by accessing event.target.value
+                            in the onChange callback. It's always an array.
+                        </p>
+                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                            <MultipleSelect />
+                        </div>
                     </div>
-                </div>
-
-                <div className="col-md-10 col-sm-10 col-xs-10 mt-5">
-                    <div className="form-group">
-                        <label className="bmd-label-floating"> Complex Grid</label>
-                     <NativeSelects/>
+                    <div className="form-group mt-5">
+                        <label> <h3> Simple Select</h3></label>
+                        <p className="text-justify">
+                            Menus are positioned over their emitting elements such that the currently selected menu item appears on top of the emitting element.
+                       </p>
+                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                            <SimpleSelect />
+                        </div>
                     </div>
-                </div>
-
-
-                <div className="col-md-10 col-sm-10 col-xs-10 mt-5">
-                    <div className="form-group">
-                        <label className="bmd-label-floating"> Complex Grid</label>
-                        <SimpleSelect />
+                    <div className="form-group mt-5">
+                        <label> <h3> Native Select </h3></label>
+                        <p className="text-justify">
+                            As the user experience can be improved on mobile using the native select of the platform, we allow such pattern.
+                       </p>
+                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                            <NativeSelects />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -58,4 +80,4 @@ class selectExample extends Component {
     }
 }
 
-export default selectExample;
+export default SelectExample;
