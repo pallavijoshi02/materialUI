@@ -6,41 +6,33 @@ class TransferListExample extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            simpleList: false,
-            enhancedList: false,
         }
     }
-
-    buttonClick(event) {
-        if (event.target.name === 'simpleList') {
-            this.setState({
-                simpleList: !this.state.simpleList,
-                enhancedList: false,
-            })
-        }
-        else if (event.target.name === 'enhancedList') {
-            this.setState({
-                simpleList: false,
-                enhancedList: !this.state.enhancedList,
-            })
-        }
-    }
-
     render() {
         return (
             <div className="row">
                 <div className="col-md-8" style={{ marginLeft: 250, padding: 38 }}>
+                    <h1>Transfer List</h1>
                     <div className="form-group">
-                        <button type="button" name="simpleList" className="btn btn-info" onClick={this.buttonClick.bind(this)}>Customized Switches</button>
-                        <button type="button" name="enhancedList" className="btn btn-info ml-auto" onClick={this.buttonClick.bind(this)}>Form Control Label Position</button>
-                    </div>
-                    <div className="col-md-10 mt-5">
-                        <div className="form-group">
-                            {!this.state.simpleList ? '' : <TransferList />}
-                            {!this.state.enhancedList ? '' : <EnhancedTransferList />}
+                        <label><h3>Simple TransferList</h3></label>
+                        <p className="text-justify">
+                        For completeness, this example includes buttons for "move all", but not every transfer list needs these.
+                        </p>
+                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                            <TransferList />
                         </div>
                     </div>
-                </div >
+                    <div className="form-group mt-5">
+                        <label> <h3> Enhanced TransferList</h3></label>
+                        <p className="text-justify">
+                        This example exchanges the "move all" buttons for a "select all / select none" checkbox, and adds a counter.
+                       </p>
+                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                            <EnhancedTransferList />
+                        </div>
+                    </div>
+                   
+                </div>
             </div>
         )
     }

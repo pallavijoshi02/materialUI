@@ -9,71 +9,62 @@ class CheckboxExample extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            checkbox: false,
-            checkBoxGroup: false,
-            checkboxLabel: false,
-            labelPosition: false,
         }
     }
-
-    buttonClick(event) {
-        if (event.target.name === 'checkbox') {
-            this.setState({
-                checkbox: !this.state.checkbox,
-                checkBoxGroup: false,
-                checkboxLabel: false,
-                labelPosition: false,
-            })
-        }
-        else if (event.target.name === 'checkBoxGroup') {
-            this.setState({
-                checkbox: false,
-                checkBoxGroup: !this.state.checkBoxGroup,
-                checkboxLabel: false,
-                labelPosition: false,
-            })
-        }
-        else if (event.target.name === 'checkboxLabel') {
-            this.setState({
-                checkbox: false,
-                checkBoxGroup: false,
-                checkboxLabel: !this.state.checkboxLabel,
-                labelPosition: false,
-            })
-        }
-        else if (event.target.name === 'labelPosition') {
-            this.setState({
-                checkbox: false,
-                checkBoxGroup: false,
-                checkboxLabel: false,
-                labelPosition: !this.state.labelPosition,
-            })
-        }
-
-    }
-
     render() {
         return (
             <div className="row">
                 <div className="col-md-8" style={{ marginLeft: 250, padding: 38 }}>
+                    <h1>Checkboxes</h1>
+                    <p className="text-justify">
+                    Checkboxes allow the user to select one or more items from a set.
+                    </p>
                     <div className="form-group">
-                        <button type="button" name="checkbox" className="btn btn-info" onClick={this.buttonClick.bind(this)}>Checkboxes</button>
-                        <button type="button" name="checkBoxGroup" className="btn btn-info ml-auto" onClick={this.buttonClick.bind(this)}>Checkboxes Group</button>
-                        <button type="button" name="checkboxLabel" className="btn btn-info" onClick={this.buttonClick.bind(this)}> Checkbox Labels</button>
-                        <button type="button" name="labelPosition" className="btn btn-info" onClick={this.buttonClick.bind(this)}> FormC ontrol Label Position</button>
-                    </div>
-                    <div className="col-md-10 mt-5">
-                        <div className="form-group">
-                            {!this.state.checkbox ? '' : <Checkboxes />}
-                            {!this.state.checkBoxGroup ? '' : <CheckboxesGroup />}
-                            {!this.state.checkboxLabel ? '' : <CheckboxLabels />}
-                            {!this.state.labelPosition ? '' : <FormControlLabelPosition />}
+                        <label><h3>Checkboxes</h3></label>
+                        <p className="text-justify">
+                        If you have multiple options appearing in a list, you can preserve space by using checkboxes 
+                        instead of on/off switches. If you have a single option, avoid using a checkbox and use an
+                         on/off switch instead.
+                    </p>
+                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                            <Checkboxes />
                         </div>
                     </div>
-                </div >
+
+                    <div className="form-group mt-5">
+                        <label> <h3> Checkboxes group </h3></label>
+                        <p className="text-justify">
+                            FormGroup is a helpful wrapper used to group selection controls components that provides an easier API.
+                       </p>
+                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                            <CheckboxesGroup />
+                        </div>
+                        <div>
+                        </div>
+                    </div>
+                    <div className="form-group mt-5">
+                        <label> <h3>Checkboxes Label</h3></label>
+                        <p className="text-justify">
+                              Checkbox can also be used with a label description thanks to the FormControlLabel component.
+                        </p>
+                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                            <CheckboxLabels />
+                        </div>
+                    </div>
+                    <div className="form-group mt-5">
+                        <label> <h3>Label Placement</h3></label>
+                        <p className="text-justify">
+                        You can change the placement of the label:
+                          </p>
+                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                            <FormControlLabelPosition />
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }
 }
+
 export default CheckboxExample;
 

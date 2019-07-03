@@ -8,67 +8,56 @@ class SwitchExamples extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            customizedSwitches: false,
-            labelPosition: false,
-            switchesGroup: false,
-            switchLabels: false,
         }
     }
-
-    buttonClick(event) {
-        if (event.target.name === 'customizedSwitches') {
-            this.setState({
-                customizedSwitches: !this.state.customizedSwitches,
-                labelPosition: false,
-                switchesGroup: false,
-                switchLabels: false,
-            })
-        }
-        else if (event.target.name === 'labelPosition') {
-            this.setState({
-                customizedSwitches: false,
-                labelPosition: !this.state.labelPosition,
-                switchesGroup: false,
-                switchLabels: false,
-            })
-        }
-        else if (event.target.name === 'switchesGroup') {
-            this.setState({
-                customizedSwitches: false,
-                labelPosition: false,
-                switchesGroup: !this.state.switchesGroup,
-                switchLabels: false,
-            })
-        }
-        else if (event.target.name === 'switchLabels') {
-            this.setState({
-                customizedSwitches: false,
-                labelPosition: false,
-                switchesGroup: false,
-                switchLabels: !this.state.switchLabels,
-            })
-        }
-    }
-
     render() {
         return (
             <div className="row">
                 <div className="col-md-8" style={{ marginLeft: 250, padding: 38 }}>
+                    <h1>Switches</h1>
+                    <p className="text-justify">
+                    Switches are the preferred way to adjust settings on mobile. The option that the switch controls, 
+                    as well as the state it’s in, should be made clear from the corresponding inline label.
+                    </p>
                     <div className="form-group">
-                        <button type="button" name="customizedSwitches" className="btn btn-info" onClick={this.buttonClick.bind(this)}>Customized Switches</button>
-                        <button type="button" name="labelPosition" className="btn btn-info ml-auto" onClick={this.buttonClick.bind(this)}>Form Control Label Position</button>
-                        <button type="button" name="switchesGroup" className="btn btn-info" onClick={this.buttonClick.bind(this)}> Switches Group</button>
-                        <button type="button" name="switchLabels" className="btn btn-info" onClick={this.buttonClick.bind(this)}>Switch Labels</button>
-                    </div>
-                    <div className="col-md-10 mt-5">
-                        <div className="form-group">
-                            {!this.state.customizedSwitches ? '' : <CustomizedSwitches />}
-                            {!this.state.labelPosition ? '' : <FormControlLabelPosition />}
-                            {!this.state.switchesGroup ? '' : <SwitchesGroup />}
-                            {!this.state.switchLabels ? '' : <SwitchLabels />}
+                        <label><h3>Label Placement</h3></label>
+                        <p className="text-justify">
+                        You can change the placement of the label:
+                        </p>
+                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                            <FormControlLabelPosition />
                         </div>
                     </div>
-                </div >
+                    <div className="form-group mt-5">
+                        <label> <h3> Customized Switch</h3></label>
+                        <p className="text-justify">
+                        Here are some examples of customizing the component. 
+                        You can learn more about this in the overrides documentation page.
+                       </p>
+                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                            <CustomizedSwitches />
+                        </div>
+                    </div>
+                    <div className="form-group mt-5">
+                        <label> <h3> Switch Group </h3></label>
+                        <p className="text-justify">
+                        FormGroup is a helpful wrapper used to group selection controls components 
+                        that provides an easier API. However, we encourage you to use a Checkbox instead.
+                        </p>
+                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                            <SwitchesGroup />
+                        </div>
+                    </div>
+                    <div className="form-group">
+                        <label><h3>Switch Label</h3></label>
+                        <p className="text-justify">
+                        Switch can also be used with a label description thanks to the FormControlLabel component.
+                        </p>
+                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                            <SwitchLabels />
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }

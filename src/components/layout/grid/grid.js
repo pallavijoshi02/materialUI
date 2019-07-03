@@ -19,95 +19,98 @@ class Grid extends Component {
             breakPoints: false
         }
     }
-
-    buttonClick(event) {
-        if (event.target.name === 'basicGrid') {
-            this.setState({
-                basicGrid: !this.state.basicGrid,
-                spacingGrid: false,
-                autoGrid: false,
-                complexGrid: false,
-                nestedGrid: false,
-                breakPoints: false
-            })
-        }
-        else if (event.target.name === 'spacing') {
-            this.setState({
-                basicGrid: false,
-                spacingGrid: !this.state.spacingGrid,
-                autoGrid: false,
-                complexGrid: false,
-                nestedGrid: false,
-                breakPoints: false
-            })
-        }
-        else if (event.target.name === 'breakPoints') {
-            this.setState({
-                basicGrid: false,
-                spacingGrid: false,
-                autoGrid: false,
-                complexGrid: false,
-                nestedGrid: false,
-                breakPoints: !this.state.breakPoints
-            })
-        }
-        else if (event.target.name === 'autoGrid') {
-            this.setState({
-                basicGrid: false,
-                spacingGrid: false,
-                autoGrid: !this.state.autoGrid,
-                complexGrid: false,
-                nestedGrid: false,
-                breakPoints: false
-            })
-        }
-        else if (event.target.name === 'complex') {
-            this.setState({
-                basicGrid: false,
-                spacingGrid: false,
-                autoGrid: false,
-                complexGrid: !this.state.basicGrid,
-                nestedGrid: false,
-                breakPoints: false
-            })
-        }
-        else if (event.target.name === 'nested') {
-            this.setState({
-                basicGrid: false,
-                spacingGrid: false,
-                autoGrid: false,
-                complexGrid: false,
-                nestedGrid: !this.state.basicGrid,
-                breakPoints: false
-            })
-        }
-    }
-
     render() {
         return (
             <div className="row">
                 <div className="col-md-8" style={{ marginLeft: 250, padding: 38 }}>
+                    <h1>Grid</h1>
+                    <p className="text-justify">
+                        The grid creates visual consistency between layouts while allowing flexibility across a wide variety of designs.
+                        Material Design’s responsive UI is based on a 12-column grid layout.
+
+                       <h3> How it works</h3>
+                        The grid system is implemented with the Grid component: <br />
+
+                        1. It uses CSS’s Flexible Box module for high flexibility. <br />
+                        2. There are two types of layout: containers and items.<br />
+                        3. Item widths are set in percentages, so they’re always fluid and sized relative to their parent element.<br />
+                        4. Items have padding to create the spacing between individual items.<br />
+                        5. There are five grid breakpoints: xs, sm, md, lg, and xl.<br /> <br />
+
+                        If you are new to or unfamiliar with flexbox, we encourage you to read this CSS-Tricks flexbox guide.<br />
+                    </p>
+
                     <div className="form-group">
-                        <button type="button" name="basicGrid" className="btn btn-info" onClick={this.buttonClick.bind(this)}>Basic Grid</button>
-                        <button type="button" name="spacing" className="btn btn-info ml-auto" onClick={this.buttonClick.bind(this)}>spacing Grid</button>
-                        <button type="button" name="breakPoints" className="btn btn-info" onClick={this.buttonClick.bind(this)}> Grid Break Points</button>
-                        <button type="button" name="autoGrid" className="btn btn-info" onClick={this.buttonClick.bind(this)}>Auto Grid</button>
-                        <button type="button" name="complex" className="btn btn-info" onClick={this.buttonClick.bind(this)}>Complex Grid</button>
-                        <button type="button" name="nested" className="btn btn-info" onClick={this.buttonClick.bind(this)}>Nested Grid</button>
-
-
-                    </div>
-                    <div className="col-md-10 mt-5">
-                        <div className="form-group">
-                            {!this.state.basicGrid ? '' : <GridExample />}
-                            {!this.state.spacingGrid ? '' : <SpacingGrid />}
-                            {!this.state.breakPoints ? '' : <GridBreakPoints />}
-                            {!this.state.autoGrid ? '' : <AutoGrid />}
-                            {!this.state.complexGrid ? '' : <ComplexGrid />}
-                            {!this.state.nestedGrid ? '' : <NestedGrid />}
+                        <label><h3> Basic Grid</h3></label>
+                        <p className="text-justify">
+                            The column widths apply at all breakpoints (i.e. xs and up).
+                       </p>
+                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                            <GridExample />
                         </div>
                     </div>
-                </div >
+
+                    <div className="form-group mt-5">
+                        <label> <h3> Spacing Grid</h3></label>
+                        <p className="text-justify">
+                            The responsive grid focuses on consistent spacing widths, rather than column width.
+                             Material Design margins and columns follow an 8px square baseline grid. The spacing property
+                             is an integer between
+                             0 and 10 inclusive. By default, the spacing between two grid items follows a linear function:
+                         output(spacing) = spacing * 8px, e.g. spacing={2} creates a 16px wide gap.
+   
+                            This output transformation function can be customized using the theme.    </p>
+                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                            <SpacingGrid />
+                        </div>
+                        <div>
+                        </div>
+                    </div>
+
+                    <div className="form-group mt-5">
+                        <label> <h3>Grid Break Points</h3></label>
+                        <p className="text-justify">
+                            Some columns have multiple widths defined, causing the layout to change at the defined breakpoint.
+                           </p>
+                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                            <GridBreakPoints />
+                        </div>
+                    </div>
+                    <div className="form-group mt-5">
+                        <label> <h3>Auto Layout Grid</h3></label>
+                        <p className="text-justify">
+                            The Auto-layout makes the items equitably share the available space. That also means you can set
+                        the width of one item and the others will automatically resize around it. </p>
+                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                            <AutoGrid />
+                        </div>
+                    </div>
+
+                    <div className="form-group mt-5">
+                        <label> <h3>Complex Grid</h3></label>
+                        <p className="text-justify">
+                            The following demo doesn't follow the Material Design specification, but illustrates
+                             how the grid can be used to build complex layouts.
+                         </p>
+                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                            <ComplexGrid />
+                        </div>
+                    </div>
+
+                    <div className="form-group mt-5">
+                        <label> <h3>Nested Grid </h3></label>
+                        <p className="text-justify">
+                            The container and item properties are two independent booleans. They can be combined.
+    
+                            A flex container is the box generated by an element with a computed display of flex or inline-flex.
+                            In-flow children of a flex container are called flex items and are laid out using the flex layout model
+                        </p>
+                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                            <NestedGrid />
+                        </div>
+                    </div>
+
+                </div>
             </div>
         )
     }

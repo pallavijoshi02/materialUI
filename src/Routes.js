@@ -21,6 +21,27 @@ import SelectExample from './components/Input/selects/selectExample';
 import TransferListExample from './components/Input/transferList/transferListExample';
 import TextfieldExample from './components/Input/textField/textfieldExample';
 import BottomNavigationEg from './components/navigation/bottomNavigation/bottomNavigationEg';
+import BreadcrumbEg from './components/navigation/breadCrumbs/breadCrumbEg';
+import LinkEg from './components/navigation/links/linksEg';
+import DrawerEg from './components/navigation/drawer/drawerEg';
+import MenuEg from './components/navigation/menu/menuEg';
+import StepperEg from './components/navigation/steppers/stepperEg';
+import TabEg from './components/navigation/tabs/tabEg';
+import DialogEg from './components/feedback/dialog/dialogEg';
+import ProgressEg from './components/feedback/progress/progressEg';
+import SnackbarEg from './components/feedback/snackbar/snackbarEg';
+import AvatarEg from './components/dataDisplay/avatars/avatarEg';
+import BadgeEg from './components/dataDisplay/badges/badgesEg';
+import ChipsEg from './components/dataDisplay/chips/chipsEg';
+import DividerEg from './components/dataDisplay/dividers/dividerEg';
+import IconEg from './components/dataDisplay/icons/iconsEg';
+import ListEg from './components/dataDisplay/lists/listEg';
+import TableEg from './components/dataDisplay/table/tableEg';
+import TooltipEg from './components/dataDisplay/toolTips/tooltipEg';
+import TypoEg from './components/dataDisplay/typography/typographyEg';
+import SpeeddialEg from './components/lab/speedDial/speedDialEg';
+import ToggleEg from './components/lab/toggleButton/toggleEg';
+import SliderEg from './components/lab/slider/sliderEg';
 
 class Routes extends Component {
   render() {
@@ -36,6 +57,7 @@ class Routes extends Component {
               <Route path="/grid" component={Grid} />
               <Route path="/gridList" component={GridList} />
               <Route path="/hidden" component={Hidden} />
+
               <Route path="/autocomplete" component={AutoComplete} />
               <Route path="/appbar" component={AppBarExample} />
               <Route path="/paper" component={PaperSheet} />
@@ -44,18 +66,46 @@ class Routes extends Component {
               <Route path="/button" component={Buttons} />
               <Route path="/checkbox" component={CheckboxExample} />
               <Route path="/radio" component={RadioButton} />
-              <Route path="/expansion" component={ExpansionPanel} />
               <Route path="/select" component={SelectExample} />
-              <Route path="/switchexample" component={SwitchExamples} />
+              <Route path="/switch" component={SwitchExamples} />
               <Route path="/textfield" component={TextfieldExample} />
               <Route path="/transferlist" component={TransferListExample} />
+
+
               <Route path="/bottomnav" component={BottomNavigationEg} />
+              <Route path="/breadcrumbs" component={BreadcrumbEg} />
+              <Route path="/drawer" component={DrawerEg} />
+              <Route path="/link" component={LinkEg} />
+              <Route path="/menu" component={MenuEg} />
+              <Route path="/steppers" component={StepperEg} />
+              <Route path="/tabs" component={TabEg} />
+
+
+              <Route path="/dialog" component={DialogEg} />
+              <Route path="/progress" component={ProgressEg} />
+              <Route path="/snackbar" component={SnackbarEg} />
+
+              <Route path="/avatar" component={AvatarEg} />
+              <Route path="/badges" component={BadgeEg} />
+              <Route path="/snackbar" component={SnackbarEg} />
+              <Route path="/chips" component={ChipsEg} />
+              <Route path="/divider" component={DividerEg} />
+              <Route path="/icons" component={IconEg} />
+              <Route path="/list" component={ListEg} />
+              <Route path="/table" component={TableEg} />
+              <Route path="/tooltip" component={TooltipEg} />
+              <Route path="/typography" component={TypoEg} />
+
+              <Route path="/slider" component={SliderEg} />
+              <Route path="/speedial" component={SpeeddialEg} />
+              <Route path="/toggle" component={ToggleEg} />
+
+
               {/* <Route path="/picker" component={PickerExample} /> */}
             </Container>
           </Switch>
         </Router>
       </div>
-
     );
   }
 }

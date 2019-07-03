@@ -12,253 +12,120 @@ import OutlinedTextFields from './outlinedTextfields';
 import TextFields from './textfields';
 import TextFieldMargins from './layoutTextField';
 
+
 class TextfieldExample extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            composedTextfield: false,
-            customizedInput: false,
-            filledInput: false,
-            filledTextfield: false,
-            formattedInputs: false,
-            inputAdorenment: false,
-            inputTextfield: false,
-            inputWithIcon: false,
-            layoutTextfield: false,
-            outlineInput: false,
-            outlineTextfield: false,
-            textfield: false,
         }
     }
-
-    buttonClick(event) {
-        if (event.target.name === 'composedTextfield') {
-            this.setState({
-                composedTextfield: !this.state.composedTextfield,
-                customizedInput: false,
-                filledInput: false,
-                filledTextfield: false,
-                formattedInputs: false,
-                inputAdorenment: false,
-                inputTextfield: false,
-                inputWithIcon: false,
-                layoutTextfield: false,
-                outlineInput: false,
-                outlineTextfield: false,
-                textfield: false,
-            })
-        }
-        else if (event.target.name === 'customizedInput') {
-            this.setState({
-                composedTextfield: false,
-                customizedInput: !this.state.customizedInput,
-                filledInput: false,
-                filledTextfield: false,
-                formattedInputs: false,
-                formattedInputs: false,
-                inputAdorenment: false,
-                inputTextfield: false,
-                inputWithIcon: false,
-                layoutTextfield: false,
-                outlineInput: false,
-                outlineTextfield: false,
-                textfield: false,
-            })
-        }
-        else if (event.target.name === 'filledInput') {
-            this.setState({
-                composedTextfield: false,
-                customizedInput: false,
-                filledInput: !this.state.filledInput,
-                filledTextfield: false,
-                formattedInputs: false,
-                inputAdorenment: false,
-                inputTextfield: false,
-                inputWithIcon: false,
-                layoutTextfield: false,
-                outlineInput: false,
-                outlineTextfield: false,
-                textfield: false,
-            })
-        }
-        else if (event.target.name === 'filledTextfield') {
-            this.setState({
-                composedTextfield: false,
-                customizedInput: false,
-                filledInput: false,
-                filledTextfield: !this.state.filledTextfield,
-                formattedInputs: false,
-                inputAdorenment: false,
-                inputTextfield: false,
-                inputWithIcon: false,
-                layoutTextfield: false,
-                outlineInput: false,
-                outlineTextfield: false,
-                textfield: false,
-            })
-        } else if (event.target.name === 'formattedInputs') {
-            this.setState({
-                composedTextfield: false,
-                customizedInput: false,
-                filledInput: false,
-                filledTextfield: false,
-                formattedInputs: !this.state.formattedInputs,
-                inputAdorenment: false,
-                inputTextfield: false,
-                inputWithIcon: false,
-                layoutTextfield: false,
-                outlineInput: false,
-                outlineTextfield: false,
-                textfield: false,
-            })
-        }
-        else if (event.target.name === 'inputAdorenment') {
-            this.setState({
-                composedTextfield: false,
-                customizedInput: false,
-                filledInput: false,
-                filledTextfield: false,
-                formattedInputs: false,
-                inputAdorenment: !this.state.inputAdorenment,
-                inputTextfield: false,
-                inputWithIcon: false,
-                layoutTextfield: false,
-                outlineInput: false,
-                outlineTextfield: false,
-                textfield: false,
-            })
-        }
-        else if (event.target.name === 'inputTextfield') {
-            this.setState({
-                composedTextfield: false,
-                customizedInput: false,
-                filledInput: false,
-                filledTextfield: false,
-                formattedInputs: false,
-                inputAdorenment: false,
-                inputTextfield: !this.state.inputTextfield,
-                inputWithIcon: false,
-                layoutTextfield: false,
-                outlineInput: false,
-                outlineTextfield: false,
-                textfield: false,
-            })
-        } else if (event.target.name === 'inputWithIcon') {
-            this.setState({
-                composedTextfield: false,
-                customizedInput: false,
-                filledInput: false,
-                filledTextfield: false,
-                formattedInputs: false,
-                inputAdorenment: false,
-                inputTextfield: false,
-                inputWithIcon: !this.state.inputWithIcon,
-                layoutTextfield: false,
-                outlineInput: false,
-                outlineTextfield: false,
-                textfield: false,
-            })
-        } else if (event.target.name === 'layoutTextfield') {
-            this.setState({
-                composedTextfield: false,
-                customizedInput: false,
-                filledInput: false,
-                filledTextfield: false,
-                formattedInputs: false,
-                inputAdorenment: false,
-                inputTextfield: false,
-                inputWithIcon: false,
-                layoutTextfield: !this.state.layoutTextfield,
-                outlineInput: false,
-                outlineTextfield: false,
-                textfield: false,
-            })
-        } else if (event.target.name === 'outlineInput') {
-            this.setState({
-                composedTextfield: false,
-                customizedInput: false,
-                filledInput: false,
-                filledTextfield: false,
-                formattedInputs: false,
-                inputAdorenment: false,
-                inputTextfield: false,
-                inputWithIcon: false,
-                layoutTextfield: false,
-                outlineInput: !this.state.outlineInput,
-                outlineTextfield: false,
-                textfield: false,
-            })
-        } else if (event.target.name === 'outlineTextfield') {
-            this.setState({
-                composedTextfield: false,
-                customizedInput: false,
-                filledInput: false,
-                filledTextfield: false,
-                formattedInputs: false,
-                inputAdorenment: false,
-                inputTextfield: false,
-                inputWithIcon: false,
-                layoutTextfield: false,
-                outlineInput: false,
-                outlineTextfield: !this.state.outlineTextfield,
-                textfield: false,
-            })
-        } else if (event.target.name === 'textfield') {
-            this.setState({
-                composedTextfield: false,
-                customizedInput: false,
-                filledInput: false,
-                filledTextfield: false,
-                formattedInputs: false,
-                inputAdorenment: false,
-                inputTextfield: false,
-                inputWithIcon: false,
-                layoutTextfield: false,
-                outlineInput: false,
-                outlineTextfield: false,
-                textfield: !this.state.textfield,
-            })
-        }
-
-    }
-
     render() {
         return (
             <div className="row">
                 <div className="col-md-8" style={{ marginLeft: 250, padding: 38 }}>
+                    <h1>TextField</h1>
+                    <p className="text-justify">
+                    Text fields allow users to enter text into a UI. They typically appear in forms and dialogs.
+                    </p>
                     <div className="form-group">
-                        <button type="button" name="composedTextfield" className="btn btn-info" onClick={this.buttonClick.bind(this)}>Composed TextFields</button>
-                        <button type="button" name="customizedInput" className="btn btn-info ml-auto" onClick={this.buttonClick.bind(this)}>Customized Input</button>
-                        <button type="button" name="filledInput" className="btn btn-info" onClick={this.buttonClick.bind(this)}> Filled Input Adorenment</button>
-                        <button type="button" name="filledTextfield" className="btn btn-info" onClick={this.buttonClick.bind(this)}>Filled TextField</button>
-
-                        <button type="button" name="inputAdorenment" className="btn btn-info" onClick={this.buttonClick.bind(this)}>Formatted Inputs</button>
-                        <button type="button" name="inputTextfield" className="btn btn-info ml-auto" onClick={this.buttonClick.bind(this)}>Input Adorenment</button>
-                        <button type="button" name="inputWithIcon" className="btn btn-info" onClick={this.buttonClick.bind(this)}> Input Textfield</button>
-                        <button type="button" name="layoutTextfield" className="btn btn-info" onClick={this.buttonClick.bind(this)}>Input With Icon</button>
-
-                        <button type="button" name="layoutTextfield" className="btn btn-info" onClick={this.buttonClick.bind(this)}>Layout TextField</button>
-                        <button type="button" name="outlineInput" className="btn btn-info" onClick={this.buttonClick.bind(this)}>Outline Input Adorenment</button>
-                        <button type="button" name="outlineTextfield" className="btn btn-info ml-auto" onClick={this.buttonClick.bind(this)}>Outline TextField</button>
-                        <button type="button" name="textfield" className="btn btn-info" onClick={this.buttonClick.bind(this)}> TextField</button>
-                    </div>
-                    <div className="col-md-10 mt-5">
-                        <div className="form-group">
-                            {!this.state.composedTextfield ? '' : <ComposedTextField />}
-                            {!this.state.customizedInput ? '' : <CustomizedInputs />}
-                            {!this.state.filledInput ? '' : <FilledInputAdornments />}
-                            {!this.state.filledTextfield ? '' : <FilledTextFields />}
-                            {!this.state.formattedInputs ? '' : < FormattedInputs />}
-                            {!this.state.inputAdorenment ? '' : < InputAdornments />}
-                            {!this.state.inputTextfield ? '' : <Inputs />}
-                            {!this.state.inputWithIcon ? '' : <InputWithIcon />}
-                            {!this.state.layoutTextfield ? '' : <TextFieldMargins/>}
-                            {!this.state.outlineInput ? '' : <OutlinedInputAdornments />}
-                            {!this.state.outlineTextfield ? '' : <OutlinedTextFields />}
-                            {!this.state.textfield ? '' : <TextFields />}
+                        <label><h3>Composed TextField</h3></label>
+                        <p className="text-justify">
+                        TextField is composed of smaller components ( FormControl, Input, FilledInput, InputLabel,
+                         OutlinedInput, and FormHelperText ) that you can leverage directly to significantly customize 
+                         your form inputs.
+                        </p>
+                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                            <ComposedTextField />
                         </div>
                     </div>
-                </div >
+                    <div className="form-group mt-5">
+                        <label> <h3> Customized Inputs</h3></label>
+                        <p className="text-justify">
+                        Here are some examples of customizing the component. 
+                        You can learn more about this in the overrides documentation page.
+                       </p>
+                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                            <CustomizedInputs />
+                        </div>
+                        <p className="text-justify">
+                        Customization does not stop at CSS, you can use composition to build custom components
+                         and give your app a unique feel. Below is an example using the InputBase component, 
+                         inspired by Google Maps.
+                        </p>
+                    </div>
+                    <div className="form-group mt-5">
+                        <label> <h3> Filled Input Adornments </h3></label>
+                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                            <FilledInputAdornments />
+                        </div>
+                    </div>
+                    <div className="form-group">
+                        <label><h3>Filled TextFields</h3></label>
+                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                            <FilledTextFields />
+                        </div>
+                    </div>
+                    <div className="form-group mt-5">
+                        <label> <h3> Filled Input Adornments </h3></label>
+                        <p className="text-justify">
+                        You can use third-party libraries to format an input. 
+                        You have to provide a custom implementation of the element with the inputComponent property. 
+                        The provided input component should handle the inputRef property. The property should be called with 
+                        a value implementing the HTMLInputElement interface.
+                            The following demo uses the react-text-mask and react-number-format libraries.
+                    </p>
+                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                            <FormattedInputs />
+                        </div>
+                    </div>
+                    <div className="form-group">
+                        <label><h3>Input Adornments</h3></label>
+                        <p className="text-justify">
+                        Input allows the provision of InputAdornment. These can be used to add a prefix, 
+                        a suffix or an action to an input. For instance, you can use an icon button to hide or reveal 
+                        the password.
+                        </p>
+                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                            <InputAdornments />
+                        </div>
+                    </div>
+                    <div className="form-group mt-5">
+                        <label> <h3> Inputs </h3></label>
+                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                            <Inputs />
+                        </div>
+                    </div>
+                    <div className="form-group">
+                        <label><h3>Input With Icon</h3></label>
+                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                            <InputWithIcon />
+                        </div>
+                    </div>
+                    <div className="form-group mt-5">
+                        <label> <h3>Outlined Input Adornments </h3></label>
+                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                            <OutlinedInputAdornments />
+                        </div>
+                    </div>
+                    <div className="form-group">
+                        <label><h3>Outlined TextFields </h3></label>
+                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                            <OutlinedTextFields />
+                        </div>
+                    </div>
+                    <div className="form-group mt-5">
+                        <label> <h3> TextFields </h3></label>
+                         <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                            <TextFields />
+                        </div>
+                    </div>
+                    <div className="form-group">
+                        <label><h3>TextField Margins</h3></label>
+                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                            <TextFieldMargins />
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }
