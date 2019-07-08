@@ -4,9 +4,7 @@ class AutoGridCode extends Component {
     render() {
         return (
             <div>
-                <pre style={{
-                    backgroundColor: 'black', color: 'white'
-                }}> {
+                <pre className="pre"> {
                         `
                             import React from 'react';
                             import {makeStyles} from '@material-ui/core/styles';
