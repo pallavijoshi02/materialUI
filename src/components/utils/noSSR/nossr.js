@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SimpleNossr from './simpleNossr';
 import FrameDeferring from './frameDeferring';
+import { Collapse } from '@material-ui/core';
 
 
 class NossrEg extends Component {
@@ -11,7 +12,8 @@ class NossrEg extends Component {
                     <h1>No SSR</h1>
                     <div className="form-group">
                         <label><h3>Client side deferring</h3></label>
-                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                        <Collapse> </Collapse>
+                          <div style={{ backgroundColor: "lightGray", height: "auto" }}>
                            <SimpleNossr/>
                         </div>
                     </div>

@@ -57,8 +57,7 @@ export default function DashBoard() {
           <ListItem button className={classes.nested}>
           <a href="hidden"><ListItemText primary="Hidden" /></a>
           </ListItem>
-
-
+          
           </List>
       </Collapse>
           <ListItem button onClick={handleClick}>
@@ -123,8 +122,7 @@ export default function DashBoard() {
           </ListItem>
           <ListItem button className={classes.nested}>
           <a href="/tabs"><ListItemText primary="Tabs" /></a>
-          </ListItem>
-          
+          </ListItem>   
         </List>
       </Collapse>
 
@@ -248,7 +246,6 @@ export default function DashBoard() {
           </ListItem>
         </List>
       </Collapse>
-
     </List>
   );
 }

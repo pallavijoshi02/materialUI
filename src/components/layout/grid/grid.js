@@ -5,20 +5,23 @@ import GridBreakPoints from './gridBreakPoints';
 import AutoGrid from './autoGrid';
 import ComplexGrid from './complexGrid';
 import NestedGrid from './nestedGrid';
+import BasicGridCode from '../../../preComponents/layout/grid/basicGrid';
 
 
 class Grid extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            basicGrid: false,
-            spacingGrid: false,
-            autoGrid: false,
-            complexGrid: false,
-            nestedGrid: false,
-            breakPoints: false
+            show:false
         }
     }
+
+     showClick(){
+        this.setState({
+            show:!this.state.show
+        })
+     }
+
     render() {
         return (
             <div className="row">
@@ -42,6 +45,14 @@ class Grid extends Component {
 
                     <div className="form-group">
                         <label><h3> Basic Grid</h3></label>
+                        <button onClick={this.showClick.bind(this)} className="pull-right">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+                        </svg>
+                        </button>
+                        <div className={!this.state.show ?'hidden':''}>
+                            <BasicGridCode/>
+                        </div>
                         <p className="text-justify">
                             The column widths apply at all breakpoints (i.e. xs and up).
                        </p>
@@ -91,7 +102,7 @@ class Grid extends Component {
                         <p className="text-justify">
                             The following demo doesn't follow the Material Design specification, but illustrates
                              how the grid can be used to build complex layouts.
-                         </p>
+                        </p>
                         <div style={{ backgroundColor: "lightGray", height: "auto" }}>
                             <ComplexGrid />
                         </div>
@@ -109,7 +120,6 @@ class Grid extends Component {
                             <NestedGrid />
                         </div>
                     </div>
-
                 </div>
             </div>
         )
