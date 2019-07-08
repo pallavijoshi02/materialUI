@@ -39,7 +39,7 @@ import ListEg from './components/dataDisplay/lists/listEg';
 import TableEg from './components/dataDisplay/table/tableEg';
 import TooltipEg from './components/dataDisplay/toolTips/tooltipEg';
 import TypoEg from './components/dataDisplay/typography/typographyEg';
-import SpeeddialEg from './components/lab/speedDial/speedDialEg';
+import SpeedDialEg from './components/lab/speedDial/speedDialEg';
 import ToggleEg from './components/lab/toggleButton/toggleEg';
 import SliderEg from './components/lab/slider/sliderEg';
 import NossrEg from './components/utils/noSSR/nossr';
@@ -76,7 +76,6 @@ class Routes extends Component {
               <Route path="/textfield" component={TextfieldExample} />
               <Route path="/transferlist" component={TransferListExample} />
 
-
               <Route path="/bottomnav" component={BottomNavigationEg} />
               <Route path="/breadcrumbs" component={BreadcrumbEg} />
               <Route path="/drawer" component={DrawerEg} />
@@ -84,7 +83,6 @@ class Routes extends Component {
               <Route path="/menu" component={MenuEg} />
               <Route path="/steppers" component={StepperEg} />
               <Route path="/tabs" component={TabEg} />
-
 
               <Route path="/dialog" component={DialogEg} />
               <Route path="/progress" component={ProgressEg} />
@@ -102,18 +100,14 @@ class Routes extends Component {
               <Route path="/typography" component={TypoEg} />
 
               <Route path="/slider" component={SliderEg} />
-              <Route path="/speedial" component={SpeeddialEg} />
+              <Route path="/speeddial" component={SpeedDialEg} />
               <Route path="/toggle" component={ToggleEg} />
-
               
               <Route path="/nossr" component={NossrEg} />
               <Route path="/popover" component={PopoverEg} />
               <Route path="/popper" component={PopperEg} />
               <Route path="/mediaquery" component={MediaQueryEg} />
-              <Route path="/slider" component={SliderEg} />
-              <Route path="/speedial" component={SpeeddialEg} />
-              <Route path="/toggle" component={ToggleEg} />
-
+              <Route path="/transition" component={TransitionEg} />
 
               {/* <Route path="/picker" component={PickerExample} /> */}
             </Container>

@@ -3,9 +3,7 @@ import SpeedDials from './simpleSpeedDial';
 import OpenIconSpeedDial from './openIconSpeedDial';
 import SpeedDialTooltipOpen from './speedDialToolTip';
 
-
-
-class SpeeddialEg extends Component {
+class SpeedDialEg extends Component {
     render() {
         return (
             <div className="row">
@@ -44,4 +42,4 @@ class SpeeddialEg extends Component {
     }
 }
 
-export default SpeeddialEg;
+export default SpeedDialEg;
