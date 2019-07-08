@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import '../../../App.css'
 
 class BasicGridCode extends Component {
     render() {
         return (
             <div>
-                <pre>
+                <pre className="pre">
                     {
                         `
                         import React, { Component } from 'react';

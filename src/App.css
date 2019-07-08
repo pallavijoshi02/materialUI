@@ -39,12 +39,19 @@
   visibility: hidden;
 }
 
+
+.pre {
+  background-color: #10161A;
+  color: #FFF;
+  align-content: left
+}
+
 body {
   font-family: 'Varela Round', sans-serif;
   font-size: 16px;
   line-height: 1.6;
   overflow-x: hidden;
-  color: #868F9B;
+  color: rgb(61, 65, 71);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -52,11 +59,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   margin-top: 0px;
   margin-bottom: 20px;
-  color: #10161A;
+  color: rgb(42, 49, 54);
 }
 
 h1 {
-  font-size: 54px;
+  font-size: 34px;
 }
 
 h2 {
