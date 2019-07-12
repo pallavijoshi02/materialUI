@@ -10,8 +10,32 @@ import ConfirmationDialog from './confirmationDialog';
 import ScrollDialog from './scrollDialog';
 import DraggableDialog from './dragableDialog';
 import AlertDialogSlide from './alertDialogSlide';
+import Collapse from '@material-ui/core/Collapse';
+import SimpleDialogCode from '../../../preComponents/feedback/dialog/simpleDialog';
+import AlertDialogCode from '../../../preComponents/feedback/dialog/alertDialog';
+import AlertDialogSlideCode from '../../../preComponents/feedback/dialog/alertDialogSlide';
+import FormDialogCode from '../../../preComponents/feedback/dialog/formDialog';
+import CustomizedDialogCode from '../../../preComponents/feedback/dialog/customizedDialog';
+import MaxWidthDialogCode from '../../../preComponents/feedback/dialog/maxWidthDialog';
+import FullScreenDialogCode from '../../../preComponents/feedback/dialog/fullScreenDialog';
+import ResponsiveDialogCode from '../../../preComponents/feedback/dialog/responsiveDialog';
+import ConfirmationDialogCode from '../../../preComponents/feedback/dialog/confirmationDialog';
+import ScrollDialogCode from '../../../preComponents/feedback/dialog/scrollDialog';
+import DragableDialogCode from '../../../preComponents/feedback/dialog/dragableDialog';
 
 class DialogEg extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            checked: false
+        }
+    }
+
+    showClick() {
+        this.setState({
+            checked: !this.state.checked
+        })
+    }
     render() {
         return (
             <div className="row">
@@ -26,6 +50,14 @@ class DialogEg extends Component {
                  </p>
                     <div className="form-group">
                         <label><h3>Simple Dialogs</h3></label>
+                        <button onClick={this.showClick.bind(this)} className="pull-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                            </svg>
+                        </button>
+                        <Collapse in={this.state.checked} className="scrollit">
+                            <SimpleDialogCode />
+                        </Collapse>
                         <p className="text-justify">
                             Simple dialogs can provide additional details or actions about a list item. For example,
                             they can display avatars, icons, clarifying subtext, or orthogonal actions (such as adding an account).
@@ -42,6 +74,14 @@ class DialogEg extends Component {
 
                     <div className="form-group mt-5">
                         <label> <h3>Alerts</h3></label>
+                        <button onClick={this.showClick.bind(this)} className="pull-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                            </svg>
+                        </button>
+                        <Collapse in={this.state.checked} className="scrollit">
+                            <AlertDialogCode />
+                        </Collapse>
                         <p className="text-justify">
                             Alerts are urgent interruptions, requiring acknowledgement, that inform the user about a situation.
 
@@ -63,12 +103,28 @@ class DialogEg extends Component {
                     </div>
                     <div className="form-group mt-5">
                         <label> <h3>Transitions</h3></label>
+                        <button onClick={this.showClick.bind(this)} className="pull-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                            </svg>
+                        </button>
+                        <Collapse in={this.state.checked} className="scrollit">
+                            <AlertDialogSlideCode />
+                        </Collapse>
                         <div style={{ backgroundColor: "lightGray", height: "auto" }}>
-                         <AlertDialogSlide/>
+                            <AlertDialogSlide />
                         </div>
                     </div>
                     <div className="form-group mt-5">
                         <label> <h3>Form dialogs</h3></label>
+                        <button onClick={this.showClick.bind(this)} className="pull-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                            </svg>
+                        </button>
+                        <Collapse in={this.state.checked} className="scrollit">
+                            <FormDialogCode />
+                        </Collapse>
                         <p>
                             Form dialogs allow users to fill out form fields within a dialog. For example,
                             if your site prompts for potential subscribers to fill in their email address,
@@ -80,6 +136,14 @@ class DialogEg extends Component {
                     </div>
                     <div className="form-group mt-5">
                         <label> <h3>Customized dialogs</h3></label>
+                        <button onClick={this.showClick.bind(this)} className="pull-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                            </svg>
+                        </button>
+                        <Collapse in={this.state.checked} className="scrollit">
+                            <CustomizedDialogCode />
+                        </Collapse>
                         <p className="text-justify">
                             Here is an example of customizing the component. You can learn more about this in
                              the overrides documentation page.
@@ -92,6 +156,14 @@ class DialogEg extends Component {
                     </div>
                     <div className="form-group mt-5">
                         <label> <h3>Optional sizes</h3></label>
+                        <button onClick={this.showClick.bind(this)} className="pull-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                            </svg>
+                        </button>
+                        <Collapse in={this.state.checked} className="scrollit">
+                            <MaxWidthDialogCode />
+                        </Collapse>
                         <p>
                             You can set a dialog maximum width by using the maxWidth enumerable in combination with
                              the fullWidth boolean. When the fullWidth property is true, the dialog will adapt based
@@ -103,12 +175,28 @@ class DialogEg extends Component {
                     </div>
                     <div className="form-group mt-5">
                         <label> <h3>Full-screen dialogs</h3></label>
+                        <button onClick={this.showClick.bind(this)} className="pull-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                            </svg>
+                        </button>
+                        <Collapse in={this.state.checked} className="scrollit">
+                            <FullScreenDialogCode />
+                        </Collapse>
                         <div style={{ backgroundColor: "lightGray", height: "auto" }}>
                             <FullScreenDialog />
                         </div>
                     </div>
                     <div className="form-group mt-5">
                         <label> <h3>Responsive full-screen</h3></label>
+                        <button onClick={this.showClick.bind(this)} className="pull-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                            </svg>
+                        </button>
+                        <Collapse in={this.state.checked} className="scrollit">
+                            <ResponsiveDialogCode />
+                        </Collapse>
                         <div style={{ backgroundColor: "lightGray", height: "auto" }}>
                             <ResponsiveDialog />
                         </div>
@@ -116,11 +204,19 @@ class DialogEg extends Component {
 
                     <div className="form-group mt-5">
                         <label> <h3>Confirmation dialogs</h3></label>
+                        <button onClick={this.showClick.bind(this)} className="pull-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                            </svg>
+                        </button>
+                        <Collapse in={this.state.checked} className="scrollit">
+                            <ConfirmationDialogCode />
+                        </Collapse>
                         <p className="text-justify">
                             Confirmation dialogs require users to explicitly confirm their choice before
                             an option is committed. For example, users can listen to multiple ringtones but
                             only make a final selection upon touching “OK”.
-    
+
                             Touching “Cancel” in a confirmation dialog, or pressing Back, cancels the action,
                             discards any changes, and closes the dialog.
                     </p>
@@ -130,9 +226,17 @@ class DialogEg extends Component {
                     </div>
                     <div className="form-group mt-5">
                         <label> <h3>Scrolling long content</h3></label>
+                        <button onClick={this.showClick.bind(this)} className="pull-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                            </svg>
+                        </button>
+                        <Collapse in={this.state.checked} className="scrollit">
+                            <ScrollDialogCode />
+                        </Collapse>
                         <p className="text-justify">
                             When dialogs become too long for the user’s viewport or device, they scroll.
-    
+
                             scroll=paper the content of the dialog scrolls within the paper element.
                             scroll=body the content of the dialog scrolls within the body element.
                             Try the demo below to see what we mean:
@@ -143,6 +247,14 @@ class DialogEg extends Component {
                     </div>
                     <div className="form-group mt-5">
                         <label> <h3>Draggable dialog</h3></label>
+                        <button onClick={this.showClick.bind(this)} className="pull-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                            </svg>
+                        </button>
+                        <Collapse in={this.state.checked} className="scrollit">
+                            <DragableDialogCode />
+                        </Collapse>
                         <p>
                             You can create a draggable dialog by using react-draggable.
                              To do so, you can pass the the imported Draggable component as the PaperComponent

@@ -22,7 +22,7 @@ class BottomNavigationEg extends Component {
                         <p className="text-justify">
                             When there are only three actions, display both icons and text labels at all times.
                             </p>
-                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                        <div>
                             <SimpleBottomNavigation />
                         </div>
                     </div>
@@ -30,7 +30,7 @@ class BottomNavigationEg extends Component {
                         <label> <h3> Label Bottom Navigation</h3></label>
                         <p className="text-justify">
                             If there are four or five actions, display inactive views as icons only.</p>
-                        <div style={{ backgroundColor: "lightGray", height: "auto" }}>
+                        <div>
                             <LabelBottomNavigation />
                         </div>
                     </div>

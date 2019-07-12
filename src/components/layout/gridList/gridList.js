@@ -3,14 +3,27 @@ import ImageGridList from './imageGridList';
 import SingleLineGridList from './singleLineGridList';
 import TitlebarGridList from './titleBarGridList';
 import AdvancedGridList from './advancedGridList';
+import Collapse from '@material-ui/core/Collapse';
+import ImageGridListCode from '../../../preComponents/layout/gridList/imageGridList';
+import SingleLineGridListCode from '../../../preComponents/layout/gridList/singleLineGridList';
+import TitlebarGridListCode from '../../../preComponents/layout/gridList/titleBarGridList';
+import AdvancedGridListCode from '../../../preComponents/layout/gridList/advancedGridList';
 
 
 class GridList extends Component {
     constructor(props) {
         super(props)
         this.state = {
+            checked:false
         }
     }
+
+    showClick(){
+        this.setState({
+                checked:!this.state.checked
+        })
+    }
+
     render() {
         return (
             <div className="row">
@@ -23,6 +36,14 @@ class GridList extends Component {
 
                     <div className="form-group">
                         <label><h3> Image-Only Grid List</h3></label>
+                        <button onClick={this.showClick.bind(this)} className="pull-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                            </svg>
+                        </button>
+                        <Collapse in={this.state.checked} className="scrollit">
+                            <ImageGridListCode />
+                        </Collapse>
                         <p className="text-justify">
                         A simple example of a scrollable image GridList.
                        </p>
@@ -33,6 +54,14 @@ class GridList extends Component {
 
                     <div className="form-group mt-5">
                         <label> <h3> Single Line Grid List</h3></label>
+                        <button onClick={this.showClick.bind(this)} className="pull-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                            </svg>
+                        </button>
+                        <Collapse in={this.state.checked}>
+                            <SingleLineGridListCode />
+                        </Collapse>
                         <p className="text-justify">
                         This example demonstrates a horizontal scrollable single-line grid list of images.
                          Horizontally scrolling grid lists are discouraged because the scrolling interferes with typical 
@@ -47,6 +76,14 @@ class GridList extends Component {
 
                     <div className="form-group mt-5">
                         <label> <h3>Grid List With TitleBar</h3></label>
+                        <button onClick={this.showClick.bind(this)} className="pull-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                            </svg>
+                        </button>
+                        <Collapse in={this.state.checked}>
+                            <TitlebarGridListCode />
+                        </Collapse>
                         <p className="text-justify">
                         This example demonstrates the use of the GridListTileBar to add an overlay to each GridListTile. 
                         The overlay can accommodate a title, subtitle and secondary action - in this example an IconButton.
@@ -57,6 +94,14 @@ class GridList extends Component {
                     </div>
                     <div className="form-group mt-5">
                         <label> <h3>Advanced Grid List</h3></label>
+                        <button onClick={this.showClick.bind(this)} className="pull-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                            </svg>
+                        </button>
+                        <Collapse in={this.state.checked}>
+                            <AdvancedGridListCode />
+                        </Collapse>
                         <p className="text-justify">
                         This example demonstrates "featured" tiles, using the rows and cols props to adjust the size
                          of the tile, and the padding prop to adjust the spacing. The tiles have a customized titlebar, 

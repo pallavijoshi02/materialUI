@@ -5,22 +5,28 @@ import GridBreakPoints from './gridBreakPoints';
 import AutoGrid from './autoGrid';
 import ComplexGrid from './complexGrid';
 import NestedGrid from './nestedGrid';
+import Collapse from '@material-ui/core/Collapse';
 import BasicGridCode from '../../../preComponents/layout/grid/basicGrid';
+import ComplexGridCode from '../../../preComponents/layout/grid/complexGrid';
+import GridBreakPointsCode from '../../../preComponents/layout/grid/gridBreakPoints';
+import NestedGridCode from '../../../preComponents/layout/grid/nestedGrid';
+import SpacingGridCode from '../../../preComponents/layout/grid/spacingGrid';
+import AutoGridCode from '../../../preComponents/layout/grid/autoGrid';
 
 
 class Grid extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            show:false
+            checked: false
         }
     }
 
-     showClick(){
+    showClick() {
         this.setState({
-            show:!this.state.show
+            checked: !this.state.checked
         })
-     }
+    }
 
     render() {
         return (
@@ -43,16 +49,16 @@ class Grid extends Component {
                         If you are new to or unfamiliar with flexbox, we encourage you to read this CSS-Tricks flexbox guide.<br />
                     </p>
 
-                    <div className="form-group">
+                    <div className="form-group mt-5">
                         <label><h3> Basic Grid</h3></label>
                         <button onClick={this.showClick.bind(this)} className="pull-right">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                        <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
-                        </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                            </svg>
                         </button>
-                        <div className={!this.state.show ?'hidden':''}>
-                            <BasicGridCode/>
-                        </div>
+                        <Collapse in={this.state.checked}>
+                            <BasicGridCode />
+                        </Collapse>
                         <p className="text-justify">
                             The column widths apply at all breakpoints (i.e. xs and up).
                        </p>
@@ -63,13 +69,21 @@ class Grid extends Component {
 
                     <div className="form-group mt-5">
                         <label> <h3> Spacing Grid</h3></label>
-                        <p className="text-justify">
+                        <button onClick={this.showClick.bind(this)} className="pull-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                            </svg>
+                        </button>
+                        <Collapse in={this.state.checked}>
+                            <SpacingGridCode />
+                        </Collapse>
+                        <p className="text-justify mt-5">
                             The responsive grid focuses on consistent spacing widths, rather than column width.
                              Material Design margins and columns follow an 8px square baseline grid. The spacing property
                              is an integer between
                              0 and 10 inclusive. By default, the spacing between two grid items follows a linear function:
-                         output(spacing) = spacing * 8px, e.g. spacing={2} creates a 16px wide gap.
-   
+                            output(spacing) = spacing * 8px, e.g. spacing={2} creates a 16px wide gap.
+
                             This output transformation function can be customized using the theme.    </p>
                         <div style={{ backgroundColor: "lightGray", height: "auto" }}>
                             <SpacingGrid />
@@ -80,6 +94,14 @@ class Grid extends Component {
 
                     <div className="form-group mt-5">
                         <label> <h3>Grid Break Points</h3></label>
+                        <button onClick={this.showClick.bind(this)} className="pull-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                            </svg>
+                        </button>
+                        <Collapse in={this.state.checked}>
+                            <GridBreakPointsCode />
+                        </Collapse>
                         <p className="text-justify">
                             Some columns have multiple widths defined, causing the layout to change at the defined breakpoint.
                            </p>
@@ -89,6 +111,14 @@ class Grid extends Component {
                     </div>
                     <div className="form-group mt-5">
                         <label> <h3>Auto Layout Grid</h3></label>
+                        <button onClick={this.showClick.bind(this)} className="pull-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                            </svg>
+                        </button>
+                        <Collapse in={this.state.checked}>
+                            <AutoGridCode />
+                        </Collapse>
                         <p className="text-justify">
                             The Auto-layout makes the items equitably share the available space. That also means you can set
                         the width of one item and the others will automatically resize around it. </p>
@@ -99,6 +129,14 @@ class Grid extends Component {
 
                     <div className="form-group mt-5">
                         <label> <h3>Complex Grid</h3></label>
+                        <button onClick={this.showClick.bind(this)} className="pull-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                            </svg>
+                        </button>
+                        <Collapse in={this.state.checked}>
+                            <ComplexGridCode />
+                        </Collapse>
                         <p className="text-justify">
                             The following demo doesn't follow the Material Design specification, but illustrates
                              how the grid can be used to build complex layouts.
@@ -110,9 +148,17 @@ class Grid extends Component {
 
                     <div className="form-group mt-5">
                         <label> <h3>Nested Grid </h3></label>
+                        <button onClick={this.showClick.bind(this)} className="pull-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                            </svg>
+                        </button>
+                        <Collapse in={this.state.checked}>
+                            <NestedGridCode />
+                        </Collapse>
                         <p className="text-justify">
                             The container and item properties are two independent booleans. They can be combined.
-    
+
                             A flex container is the box generated by an element with a computed display of flex or inline-flex.
                             In-flow children of a flex container are called flex items and are laid out using the flex layout model
                         </p>
