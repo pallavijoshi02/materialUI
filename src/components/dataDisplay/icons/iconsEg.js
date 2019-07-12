@@ -3,8 +3,25 @@ import SvgIcons from './svgIcon';
 import SvgMaterialIcons from './svgMaterialIcon';
 import Icons from './fontMaterialIcon';
 import FontAwesome from './fontAwsomeIcon';
+import Collapse from '@material-ui/core/Collapse';
+import SvgIconCode from '../../../preComponents/dataDisplay/icons/svgIcon';
+import SvgMaterialIconCode from '../../../preComponents/dataDisplay/icons/svgMaterialIcon';
+import FontMatrialIconCode from '../../../preComponents/dataDisplay/icons/fontMaterialIcon';
+import FontAwsomeIconCode from '../../../preComponents/dataDisplay/icons/fontAwsomeIcon';
 
-class IconEg extends Component {
+class IconEg extends Component {constructor(props) {
+    super(props)
+    this.state = {
+        checked:false
+    }
+}
+
+showClick(){
+    this.setState({
+            checked:!this.state.checked
+    })
+}
+
     render() {
         return (
             <div className="row">
@@ -21,6 +38,14 @@ class IconEg extends Component {
                         </p>
                     <div className="form-group">
                         <label><h3>SVG Icons</h3></label>
+                        <button onClick={this.showClick.bind(this)} className="pull-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                            </svg>
+                        </button>
+                        <Collapse in={this.state.checked} className="scrollit">
+                            <SvgIconCode />
+                        </Collapse>
                         <p className="text-justify">
                             The SvgIcon component takes an SVG path element as its child and converts it to a React component
                             that displays the path, and allows the icon to be styled and respond to mouse events.
@@ -38,6 +63,14 @@ class IconEg extends Component {
 
                     <div className="form-group mt-5">
                         <label> <h3>SVG Material icons</h3></label>
+                        <button onClick={this.showClick.bind(this)} className="pull-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                            </svg>
+                        </button>
+                        <Collapse in={this.state.checked} className="scrollit">
+                            <SvgMaterialIconCode />
+                        </Collapse>
                         <p className="text-justify">
                             It's interesting to have the building blocks needed to implement custom icons,
                             but what about presets? We provide a separate npm package, @material-ui/icons,
@@ -68,12 +101,28 @@ class IconEg extends Component {
                     </div>
                     <div className="form-group mt-5">
                         <label> <h3>Font Material icons</h3></label>
+                        <button onClick={this.showClick.bind(this)} className="pull-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                            </svg>
+                        </button>
+                        <Collapse in={this.state.checked} className="scrollit">
+                            <FontMatrialIconCode />
+                        </Collapse>
                         <div style={{ backgroundColor: "lightGray", height: "auto" }}>
                             <Icons />
                         </div>
                     </div>
                     <div className="form-group mt-5">
                         <label> <h3>Font Awesome</h3></label>
+                        <button onClick={this.showClick.bind(this)} className="pull-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                            </svg>
+                        </button>
+                        <Collapse in={this.state.checked} className="scrollit">
+                            <FontAwsomeIconCode />
+                        </Collapse>
                         <div style={{ backgroundColor: "lightGray", height: "auto" }}>
                             <FontAwesome />
                         </div>

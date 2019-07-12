@@ -10,6 +10,17 @@ import OutlinedButtons from './outlinedButtons';
 import ButtonSizes from './sizeButton';
 import SplitButton from './splitButton';
 import TextButtons from './textButtons';
+import Collapse from '@material-ui/core/Collapse';
+import ComplexButtonCode from '../../../preComponents/Input/button/complexButtons';
+import ContainedButtonCode from '../../../preComponents/Input/button/containedButton';
+import CustomizedButtonCode from '../../../preComponents/Input/button/customizedButton';
+import FLoatingButtonCode from '../../../preComponents/Input/button/floatingButton';
+import GroupButtonCode from '../../../preComponents/Input/button/groupButton';
+import IconButtonCode from '../../../preComponents/Input/button/IconButton';
+import IconLabelButtonCode from '../../../preComponents/Input/button/IconLabelButton';
+import OutlinedButtonCode from '../../../preComponents/Input/button/outlinedButtons';
+import SizeButtonCode from '../../../preComponents/Input/button/sizeButton';
+import TextButtonCode from '../../../preComponents/Input/button/textButtons';
 
 
 
@@ -17,8 +28,16 @@ class buttons extends Component {
     constructor(props) {
         super(props)
         this.state = {
+            checked:false
         }
     }
+
+    showClick(){
+        this.setState({
+            checked:!this.state.checked
+        })
+    }
+ 
     render() {
         return (
             <div className="row">
@@ -29,6 +48,14 @@ class buttons extends Component {
                     </p>
                     <div className="form-group">
                         <label><h3> Complex Buttons</h3></label>
+                        <button onClick={this.showClick.bind(this)} className="pull-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                            </svg>
+                        </button>
+                        <Collapse in={this.state.checked}>
+                            <ComplexButtonCode />
+                        </Collapse>
                         <p className="text-justify">
                             The Text Buttons, Contained Buttons, Floating Action Buttons and Icon Buttons are built
                             on top of the same component: the ButtonBase. You can take advantage of this lower level
@@ -41,6 +68,14 @@ class buttons extends Component {
 
                     <div className="form-group mt-5">
                         <label> <h3>Contained Button </h3></label>
+                        <button onClick={this.showClick.bind(this)} className="pull-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                            </svg>
+                        </button>
+                        <Collapse in={this.state.checked}>
+                            <ContainedButtonCode />
+                        </Collapse>
                         <p className="text-justify">
                             Contained buttons are high-emphasis,
                             distinguished by their use of elevation and fill. They contain actions that are primary to your app.
@@ -52,6 +87,14 @@ class buttons extends Component {
                     </div>
                     <div className="form-group mt-5">
                         <label> <h3>Customized Buttons</h3></label>
+                        <button onClick={this.showClick.bind(this)} className="pull-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                            </svg>
+                        </button>
+                        <Collapse in={this.state.checked}>
+                            <CustomizedButtonCode />
+                        </Collapse>
                         <p className="text-justify">
                             In the following example, we demonstrate how to use react-autosuggest.
                              It's also using autosuggest-highlight for the highlighting logic.
@@ -62,6 +105,14 @@ class buttons extends Component {
                     </div>
                     <div className="form-group mt-5">
                         <label> <h3>Floating Action Button </h3></label>
+                        <button onClick={this.showClick.bind(this)} className="pull-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                            </svg>
+                        </button>
+                        <Collapse in={this.state.checked}>
+                            <FLoatingButtonCode />
+                        </Collapse>
                         <p className="text-justify">
                             A floating action button (FAB) performs the primary, or most common, action on a screen. It appears in front of all screen content, typically as a circular shape with an icon in its center. FABs come in two types: regular, and extended.
     
@@ -75,6 +126,14 @@ class buttons extends Component {
                     </div>
                     <div className="form-group mt-5">
                         <label> <h3>Group Buttons</h3></label>
+                        <button onClick={this.showClick.bind(this)} className="pull-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                            </svg>
+                        </button>
+                        <Collapse in={this.state.checked}>
+                            <GroupButtonCode />
+                        </Collapse>
                         <p className="text-justify">
                             The ButtonGroup component can be used to group outlined (the default) or contained butto
                           </p>
@@ -84,6 +143,14 @@ class buttons extends Component {
                     </div>
                     <div className="form-group mt-5">
                         <label> <h3>Icon Button </h3></label>
+                        <button onClick={this.showClick.bind(this)} className="pull-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                            </svg>
+                        </button>
+                        <Collapse in={this.state.checked}>
+                            <IconButtonCode />
+                        </Collapse>
                         <p className="text-justify">
                             Icon buttons are commonly found in app bars and toolbars.
     
@@ -96,6 +163,14 @@ class buttons extends Component {
                     </div>
                     <div className="form-group mt-5">
                         <label> <h3>Icon With Button Label</h3></label>
+                        <button onClick={this.showClick.bind(this)} className="pull-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                            </svg>
+                        </button>
+                        <Collapse in={this.state.checked}>
+                            <IconLabelButtonCode />
+                        </Collapse>
                         <p className="text-justify">
                             Sometimes you might want to have icons for certain button to enhance the UX of the application
                             as we recognize logos more easily than plain text. For example, if you have a delete button you
@@ -108,6 +183,14 @@ class buttons extends Component {
                     </div>
                     <div className="form-group mt-5">
                         <label> <h3>Outlined Button </h3></label>
+                        <button onClick={this.showClick.bind(this)} className="pull-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                            </svg>
+                        </button>
+                        <Collapse in={this.state.checked}>
+                            <OutlinedButtonCode />
+                        </Collapse>
                         <p className="text-justify">
                             Outlined buttons are also a lower emphasis alternative to contained buttons,
                             or a higher emphasis alternative to text buttons.
@@ -118,6 +201,14 @@ class buttons extends Component {
                     </div>
                     <div className="form-group mt-5">
                         <label> <h3>Button Size</h3></label>
+                        <button onClick={this.showClick.bind(this)} className="pull-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                            </svg>
+                        </button>
+                        <Collapse in={this.state.checked}>
+                            <SizeButtonCode />
+                        </Collapse>
                         <p className="text-justify">
                             Fancy larger or smaller buttons? Use the size property.
                           </p>
@@ -138,6 +229,14 @@ class buttons extends Component {
                     </div>
                     <div className="form-group mt-5">
                         <label> <h3>Text Button</h3></label>
+                        <button onClick={this.showClick.bind(this)} className="pull-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                            </svg>
+                        </button>
+                        <Collapse in={this.state.checked}>
+                            <TextButtonCode />
+                        </Collapse>
                         <p className="text-justify">
                             Text buttons are typically used for less-pronounced actions, including those located:
     

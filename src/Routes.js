@@ -90,7 +90,6 @@ class Routes extends Component {
 
               <Route path="/avatar" component={AvatarEg} />
               <Route path="/badges" component={BadgeEg} />
-              <Route path="/snackbar" component={SnackbarEg} />
               <Route path="/chips" component={ChipsEg} />
               <Route path="/divider" component={DividerEg} />
               <Route path="/icons" component={IconEg} />
