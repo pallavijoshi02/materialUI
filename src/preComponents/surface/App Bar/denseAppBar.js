@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class DenseAppBarCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -33,3 +42,13 @@ export default function DenseAppBar() {
         </div>
     );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default DenseAppBarCode;

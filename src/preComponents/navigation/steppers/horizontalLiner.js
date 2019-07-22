@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class HorizontalLinerCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Stepper from '@material-ui/core/Stepper';
@@ -146,3 +155,25 @@ export default function HorizontalLinearStepper() {
     </div>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default HorizontalLinerCode;
+
+
+
+
+
+
+
+
+
+
+
+

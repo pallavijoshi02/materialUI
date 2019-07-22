@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class CustomSepratorCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
@@ -64,3 +73,17 @@ export default function CustomSeparator() {
     </div>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default CustomSepratorCode;
+
+
+
+

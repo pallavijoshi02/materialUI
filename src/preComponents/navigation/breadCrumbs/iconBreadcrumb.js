@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class IconBreadcrumbCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
@@ -54,3 +63,13 @@ export default function IconBreadcrumbs() {
     </Paper>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default IconBreadcrumbCode;

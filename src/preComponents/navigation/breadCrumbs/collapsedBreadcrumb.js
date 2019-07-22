@@ -1,4 +1,12 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
+import React, { Component } from 'react';
+
+
+class CollapsedBreadCrumbCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
@@ -45,3 +53,13 @@ export default function CollapsedBreadcrumbs() {
     </Paper>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default CollapsedBreadCrumbCode;

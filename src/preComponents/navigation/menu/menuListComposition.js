@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class MenuListCompositionCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
@@ -74,3 +83,17 @@ export default function MenuListComposition() {
     </div>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default MenuListCompositionCode;
+
+
+
+

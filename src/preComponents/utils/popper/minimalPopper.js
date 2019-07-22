@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class MinimalPopperCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import Popper from '@material-ui/core/Popper';
 
@@ -22,3 +31,15 @@ export default function MinimalPopper() {
     </div>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default MinimalPopperCode;
+
+

@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class SimpleMenuCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
@@ -33,3 +42,22 @@ export default function SimpleMenu() {
     </div>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default SimpleMenuCode;
+
+
+
+
+
+
+
+
+

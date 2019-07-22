@@ -1,5 +1,12 @@
-/* eslint-disable no-nested-ternary */
+import React, { Component } from 'react';
 
+
+class RouterBreadcrumbCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React ,{Component} from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
@@ -85,7 +92,7 @@ class RouterBreadcrumbs extends Component {
                   </LinkRouter>
                   {pathnames.map((value, index) => {
                     const last = index === pathnames.length - 1;
-                    const to = `/${pathnames.slice(0, index + 1).join('/')}`;
+                    const to = '/${'pathnames.slice(0, index + 1).join('/')'}';
 
                     return last ? (
                       <Typography color="textPrimary" key={to}>
@@ -124,3 +131,14 @@ RouterBreadcrumbs.propTypes = {
 };
 
 export default withStyles(styles)(RouterBreadcrumbs);
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default RouterBreadcrumbCode;
+

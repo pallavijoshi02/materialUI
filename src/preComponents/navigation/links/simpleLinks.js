@@ -1,4 +1,12 @@
-/* eslint-disable no-script-url */
+import React, { Component } from 'react';
+
+
+class SimpleLinkCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Link from '@material-ui/core/Link';
@@ -30,3 +38,16 @@ export default function Links() {
     </Typography>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default SimpleLinkCode;
+
+
+

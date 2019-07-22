@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class UseWidthCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import { ThemeProvider, useTheme } from '@material-ui/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
@@ -22,7 +31,7 @@ function useWidth() {
 
 function MyComponent() {
   const width = useWidth();
-  return <span>{`width: ${width}`}</span>;
+  return <span>{'width: ${"width"}'}</span>;
 }
 
 const theme = createMuiTheme();
@@ -34,3 +43,14 @@ export default function UseWidth() {
     </ThemeProvider>
   );
 }
+`
+       }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default UseWidthCode;
+

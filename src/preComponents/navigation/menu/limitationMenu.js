@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class LimitationMenuCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import MenuList from '@material-ui/core/MenuList';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -45,3 +54,13 @@ export default function TypographyMenu() {
     </Paper>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default LimitationMenuCode;

@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class CustomizedBreadCrumbCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import { emphasize, withStyles, makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
@@ -66,3 +75,15 @@ export default function CustomizedBreadcrumbs() {
     </Paper>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default CustomizedBreadCrumbCode;
+
+

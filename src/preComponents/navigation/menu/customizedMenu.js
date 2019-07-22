@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class CustomizedMenuCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
@@ -91,3 +100,19 @@ export default function CustomizedMenus() {
     </div>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default CustomizedMenuCode;
+
+
+
+
+
+

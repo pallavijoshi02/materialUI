@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class ChangeTransitionCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
@@ -36,3 +45,17 @@ export default function FadeMenu() {
     </div>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default ChangeTransitionCode;
+
+
+
+

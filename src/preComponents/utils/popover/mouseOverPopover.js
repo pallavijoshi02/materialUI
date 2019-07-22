@@ -1,3 +1,11 @@
+import React, { Component } from 'react';
+
+class MouseOverPopoverCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import Popover from '@material-ui/core/Popover';
 import Typography from '@material-ui/core/Typography';
@@ -60,3 +68,17 @@ export default function MouseOverPopover() {
     </div>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default MouseOverPopoverCode;
+
+
+
+

@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class AlternativeLabelCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Stepper from '@material-ui/core/Stepper';
@@ -89,3 +98,21 @@ export default function HorizontalLabelPositionBelowStepper() {
     </div>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default AlternativeLabelCode;
+
+
+
+
+
+
+
+

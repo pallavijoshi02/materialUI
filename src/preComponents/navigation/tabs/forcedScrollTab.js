@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class ForcedScrollTabCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
@@ -71,3 +80,14 @@ export default function ScrollableTabsButtonForce() {
     </div>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default ForcedScrollTabCode;
+

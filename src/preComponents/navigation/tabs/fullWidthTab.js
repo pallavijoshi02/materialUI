@@ -48,8 +48,7 @@ export default function FullWidthTabs() {
           onChange={handleChange}
           indicatorColor="primary"
           textColor="primary"
-          variant="fullWidth"
-        >
+          variant="fullWidth">
           <Tab label="Item One" />
           <Tab label="Item Two" />
           <Tab label="Item Three" />

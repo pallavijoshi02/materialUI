@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class SlideCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import Switch from '@material-ui/core/Switch';
 import Paper from '@material-ui/core/Paper';
@@ -54,3 +63,19 @@ export default function SimpleSlide() {
     </div>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default SlideCode;
+
+
+
+
+
+

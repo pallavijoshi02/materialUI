@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class GrowCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Switch from '@material-ui/core/Switch';
@@ -64,3 +73,16 @@ export default function SimpleGrow() {
     </div>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default GrowCode;
+
+
+

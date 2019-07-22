@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class MobileStepperCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import MobileStepper from '@material-ui/core/MobileStepper';
@@ -101,3 +110,16 @@ export default function TextMobileStepper() {
     </div>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default MobileStepperCode;
+
+
+

@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class ErrorStepCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Stepper from '@material-ui/core/Stepper';
@@ -157,3 +166,23 @@ export default function HorizontalNonLinearStepperWithError() {
     </div>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default ErrorStepCode;
+
+
+
+
+
+
+
+
+
+

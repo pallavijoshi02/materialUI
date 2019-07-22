@@ -1,3 +1,11 @@
+import React, { Component } from 'react';
+
+class SimpleNoSsrCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
@@ -33,3 +41,16 @@ SimpleNoSsr.propTypes = {
 };
 
 export default withStyles(styles)(SimpleNoSsr);
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default SimpleNoSsrCode;
+
+
+

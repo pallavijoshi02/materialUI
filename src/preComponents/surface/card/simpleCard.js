@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class SimpleCardCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -55,3 +64,15 @@ export default function SimpleCard() {
     </Card>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default SimpleCardCode;
+
+

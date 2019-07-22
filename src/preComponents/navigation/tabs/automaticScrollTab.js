@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class AutomaticScrollTabCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
@@ -64,3 +73,15 @@ export default function ScrollableTabsButtonAuto() {
     </div>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default AutomaticScrollTabCode;
+
+

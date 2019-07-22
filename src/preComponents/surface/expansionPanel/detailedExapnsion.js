@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class DetailedExpansionCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
@@ -34,7 +43,7 @@ const useStyles = makeStyles(theme => ({
     flexBasis: '33.33%',
   },
   helper: {
-    borderLeft: `2px solid ${theme.palette.divider}`,
+    borderLeft: '2px solid ${"theme.palette.divider"}',
     padding: theme.spacing(1, 2),
   },
   link: {
@@ -90,3 +99,13 @@ export default function DetailedExpansionPanel() {
     </div>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default DetailedExpansionCode;

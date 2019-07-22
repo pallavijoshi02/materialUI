@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class PersistentDrawerCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
@@ -31,7 +40,7 @@ const useStyles = makeStyles(theme => ({
     }),
   },
   appBarShift: {
-    width: `calc(100% - ${drawerWidth}px)`,
+    width: 'calc(100% - ${"drawerWidth"}px)',
     marginLeft: drawerWidth,
     transition: theme.transitions.create(['margin', 'width'], {
       easing: theme.transitions.easing.easeOut,
@@ -179,3 +188,20 @@ export default function PersistentDrawerLeft() {
     </div>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default PersistentDrawerCode;
+
+
+
+
+
+
+
