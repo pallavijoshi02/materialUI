@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class PopperPopupStateCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
@@ -37,3 +46,19 @@ export default function PopperPopupState() {
     </PopupState>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default PopperPopupStateCode;
+
+
+
+
+
+

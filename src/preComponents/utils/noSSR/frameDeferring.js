@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class FrameDeferringCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import NoSsr from '@material-ui/core/NoSsr';
@@ -55,3 +64,13 @@ function FrameDeferring() {
 }
 
 export default FrameDeferring;
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default FrameDeferringCode;

@@ -1,5 +1,12 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
+import React, { Component } from 'react';
 
+
+class ButtonLinkCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import Link from '@material-ui/core/Link';
 
@@ -16,3 +23,14 @@ export default function ButtonLink() {
     </Link>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default ButtonLinkCode;
+

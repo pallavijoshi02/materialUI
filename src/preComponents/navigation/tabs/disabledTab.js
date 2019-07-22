@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class DisableTabCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
@@ -20,3 +29,23 @@ export default function DisabledTabs() {
     </Paper>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default DisableTabCode;
+
+
+
+
+
+
+
+
+
+

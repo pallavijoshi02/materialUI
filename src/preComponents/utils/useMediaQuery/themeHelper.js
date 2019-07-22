@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class ThemeHelperCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import { createMuiTheme, useTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
@@ -7,7 +16,7 @@ function MyComponent() {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up('sm'));
 
-  return <span>{`theme.breakpoints.up('sm') matches: ${matches}`}</span>;
+  return <span>{'theme.breakpoints.up('sm') matches: ${"matches"}'}</span>;
 }
 
 const theme = createMuiTheme();
@@ -19,3 +28,15 @@ export default function ThemeHelper() {
     </ThemeProvider>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default ThemeHelperCode;
+
+

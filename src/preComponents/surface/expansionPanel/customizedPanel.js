@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class CustomizedPanelCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import MuiExpansionPanel from '@material-ui/core/ExpansionPanel';
@@ -94,3 +103,17 @@ export default function CustomizedExpansionPanels() {
     </div>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default CustomizedPanelCode;
+
+
+
+

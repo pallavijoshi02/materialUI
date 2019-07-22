@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class MediaCardCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -49,3 +58,16 @@ export default function MediaCard() {
     </Card>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default MediaCardCode;
+
+
+

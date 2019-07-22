@@ -3,7 +3,7 @@ import AboutUs from './about';
 import Service from './service';
 import Carrer from './carrer';
 import ContactUs from './contactUs';
-import Header from '../common/header';
+import Header from './header';
 
 
 class Dashboard extends Component {

@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class SelectedMenuCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
@@ -73,3 +82,19 @@ export default function SimpleListMenu() {
     </div>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default SelectedMenuCode;
+
+
+
+
+
+

@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class ServerSideCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import mediaQuery from 'css-mediaquery';
 import { ThemeProvider } from '@material-ui/styles';
@@ -6,7 +15,7 @@ import useMediaQueryTheme from '@material-ui/core/useMediaQuery';
 function MyComponent() {
   const matches = useMediaQueryTheme('@media (min-width:600px)');
 
-  return <span>{`@media (min-width:600px) matches: ${matches}`}</span>;
+  // return <span>{'@media (min-width:600px) matches: ${"matches"}'}</span>;
 }
 
 export default function ServerSide() {
@@ -22,3 +31,14 @@ export default function ServerSide() {
     </ThemeProvider>
   );
 }
+
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default ServerSideCode;

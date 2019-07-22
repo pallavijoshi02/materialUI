@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class TempDrawerCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -111,3 +120,16 @@ export default function TemporaryDrawer() {
     </div>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default TempDrawerCode;
+
+
+

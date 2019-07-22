@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class SwipeDrawerCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
@@ -130,3 +139,13 @@ export default function SwipeableTemporaryDrawer() {
     </div>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default SwipeDrawerCode;

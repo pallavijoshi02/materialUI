@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class ResponsiveDrawerCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
@@ -32,7 +41,7 @@ const useStyles = makeStyles(theme => ({
   appBar: {
     marginLeft: drawerWidth,
     [theme.breakpoints.up('sm')]: {
-      width: `calc(100% - ${drawerWidth}px)`,
+      width: 'calc(100% - ${"drawerWidth"}px)',
     },
   },
   menuButton: {
@@ -170,3 +179,22 @@ ResponsiveDrawer.propTypes = {
   // You won't need it on your project.
   container: PropTypes.object,
 };
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default ResponsiveDrawerCode;
+
+
+
+
+
+
+
+
+

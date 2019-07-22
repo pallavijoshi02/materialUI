@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class PostionedProperCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Popper from '@material-ui/core/Popper';
@@ -76,3 +85,13 @@ export default function PositionedPopper() {
     </div>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default PostionedProperCode;

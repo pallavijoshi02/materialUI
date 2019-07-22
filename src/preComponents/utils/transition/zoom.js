@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class ZoomCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import Switch from '@material-ui/core/Switch';
 import Paper from '@material-ui/core/Paper';
@@ -59,3 +68,15 @@ export default function SimpleZoom() {
     </div>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default ZoomCode;
+
+

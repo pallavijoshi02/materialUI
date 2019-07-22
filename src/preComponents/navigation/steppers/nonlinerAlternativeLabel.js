@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class NonLinerAlternativeLavelCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Stepper from '@material-ui/core/Stepper';
@@ -111,12 +120,7 @@ export default function HorizontalNonLinearAlternativeLabelStepper() {
     const newCompleted = new Set(completed);
     newCompleted.add(activeStep);
     setCompleted(newCompleted);
-
-    /**
-     * Sigh... it would be much nicer to replace the following if conditional with
-     * `if (!this.allStepsComplete())` however state is not set when we do this,
-     * thus we have to resort to not being very DRY.
-     */
+    
     if (completed.size !== totalSteps() - skippedSteps()) {
       handleNext();
     }
@@ -212,3 +216,13 @@ export default function HorizontalNonLinearAlternativeLabelStepper() {
     </div>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default NonLinerAlternativeLavelCode;

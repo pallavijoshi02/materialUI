@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class ComplexInteractionCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
@@ -122,3 +131,15 @@ export default function RecipeReviewCard() {
     </Card>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default ComplexInteractionCode;
+
+

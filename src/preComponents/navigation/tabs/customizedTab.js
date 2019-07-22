@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class CustomizedTabCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import Tabs from '@material-ui/core/Tabs';
@@ -116,3 +125,20 @@ export default function CustomizedTabs() {
     </div>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default CustomizedTabCode;
+
+
+
+
+
+
+

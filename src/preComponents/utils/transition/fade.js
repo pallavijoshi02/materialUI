@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class FadeCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Switch from '@material-ui/core/Switch';
@@ -52,3 +61,15 @@ export default function SimpleFade() {
     </div>
   );
 }
+
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default FadeCode;
+

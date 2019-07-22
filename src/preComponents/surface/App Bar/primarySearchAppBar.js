@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class PrimarySearchAppBarCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -228,3 +237,16 @@ export default function PrimarySearchAppBar() {
         </div>
     );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default PrimarySearchAppBarCode;
+
+
+

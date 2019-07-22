@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class SimplePopperCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Popper from '@material-ui/core/Popper';
@@ -40,3 +49,16 @@ export default function SimplePopper() {
     </div>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default SimplePopperCode;
+
+
+

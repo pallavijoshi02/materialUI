@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class CustomizedStepperCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Stepper from '@material-ui/core/Stepper';
@@ -131,3 +140,22 @@ export default function CustomizedSteppers() {
     </div>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default CustomizedStepperCode;
+
+
+
+
+
+
+
+
+

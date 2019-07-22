@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class BottomNavigationCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
@@ -31,3 +40,15 @@ export default function SimpleBottomNavigation() {
     </BottomNavigation>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default BottomNavigationCode;
+
+

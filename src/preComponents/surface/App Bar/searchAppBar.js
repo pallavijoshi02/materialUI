@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class SearchAppBarCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -97,3 +106,18 @@ export default function SearchAppBar() {
         </div>
     );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default SearchAppBarCode;
+
+
+
+
+

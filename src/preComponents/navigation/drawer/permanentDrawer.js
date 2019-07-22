@@ -1,3 +1,12 @@
+import React, { Component } from 'react';
+
+
+class ParmanentDrawerCode extends Component {
+    render() {
+        return (
+            <div>
+                <pre className="pre"> {
+`
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -20,7 +29,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
   },
   appBar: {
-    width: `calc(100% - ${drawerWidth}px)`,
+    width: 'calc(100% - ${"drawerWidth"}px)',
     marginLeft: drawerWidth,
   },
   drawer: {
@@ -108,3 +117,18 @@ export default function PermanentDrawerLeft() {
     </div>
   );
 }
+`
+                      }
+                </pre>
+            </div>
+        )
+    }
+}
+
+
+export default ParmanentDrawerCode;
+
+
+
+
+
